@@ -1,4 +1,4 @@
-﻿<#
+<#
 
 .SYNOPSIS
 PSAppDeployToolkit - This script performs the installation or uninstallation of an application(s).
@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2025-02-11'
+    DeployAppScriptDate = '2025-10-10'
 }
 
 function Install-ADTDeployment
@@ -256,7 +256,7 @@ function Install-ADTDeployment
     ##====================
 
     
-    $ARPs = Get-ADTApplication -Name 'VLC media player'
+    $ARPs = Get-ADTApplication -Name 'WinSCP'
     if (Compare-Version $($adtSession.AppVersion) $ARPs.DisplayVersion "eq") {
         Branding-Key -Action "Create"
         If($Platform -eq "RAPPS"){ Set-ADTRegistryKey -Key "HKEY_LOCAL_MACHINE\SOFTWARE\AllianzPackages\$($adtSession.AppVendor)_$($adtSession.AppName)_PKG" -Name "Platform" -Value "AMC & AVC & RAPPS" -Type String }
@@ -329,7 +329,7 @@ function Uninstall-ADTDeployment
 
     Remove-ADTFolder -Path "$envSystemDrive\Users\Default\AppData\Roaming\VLC"
 
-    $ARPs = Get-ADTApplication -Name 'VLC media player'
+    $ARPs = Get-ADTApplication -Name 'WinSCP'
     if (Compare-Version $($adtSession.AppVersion) $ARPs.DisplayVersion "eq") {}
     else{Branding-Key -Action "Delete"}
 

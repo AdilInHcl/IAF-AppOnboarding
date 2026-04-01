@@ -74,6 +74,9 @@ param
     [System.String]$Platform,
 
     [Parameter(Mandatory = $false)]
+    [Switch]$NoDefer,
+
+    [Parameter(Mandatory = $false)]
     [System.Management.Automation.SwitchParameter]$SuppressRebootPassThru,
 
     [Parameter(Mandatory = $false)]
@@ -119,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2025-10-10'
+    DeployAppScriptDate = '2026--02-11'
 }
 
 function Install-ADTDeployment
@@ -250,11 +253,18 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.
+    if($NoDefer){
+      $Defertime = 900
+      $DeferCount = 0  
+     
+    }else{
+        $Defertime = 900
+        $DeferCount = 1
+    }
     if ($adtSession.AppProcessesToClose.Count -gt 0)
     {
-        Show-ADTInstallationWelcome -CloseProcesses $adtSession.AppProcessesToClose -AllowDefer -DeferTimes 3 -ForceCountdown 600
+        Show-ADTInstallationWelcome -CloseProcesses $adtSession.AppProcessesToClose -AllowDefer -DeferTimes $DeferCount -ForceCountdown $DeferTime
     }
-
     ## <Perform Pre-Uninstallation tasks here>
 
     

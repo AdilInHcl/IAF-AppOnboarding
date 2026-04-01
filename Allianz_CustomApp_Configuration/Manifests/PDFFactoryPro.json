@@ -2,7 +2,7 @@
 	"Name": "PDFFactoryPro",
 	"Source": "https://fineprint.com",
 	"Get": {
-		"Uri": "https://github.developer.allianz.io/api/v3/repos/WorkplaceServices/IAF-Custom-FAM778-FinePrint-PdfFactoryPro/releases/latest",
+		"Uri": "https://github.developer.allianz.io/api/v3/repos/intune-appfactory-Packages/PDFFactoryPro/releases/latest",
 		"MatchVersion": "(\\d+(\\.\\d+){1,4}).*",
 		"MatchFileTypes": "\\.exe$|\\.msi$|\\.zip$"
 	},

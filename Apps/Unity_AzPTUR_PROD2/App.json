@@ -1,0 +1,67 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Unity application used by call center agents in AzP for RSA, Medical and Travel assistance LOBs",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_Accenture_Unity-AZPTUR-PROD2_<version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Optional",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+	    "FamilyID:FAM4192"
+        ],
+        "Owner": "extern.nikumbh_kaustubh@allianz.de;extern.sipahi_bulent@allianz.de",
+        "ScopeTagName":  [
+            "Service_AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\AllianzPackages\\Accenture_Unity-AzPTUR-PROD2_PKG",
+            "ValueName": "Version",
+            "Operator": "Equal",
+            "Value": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }        
+    ],
+    "Assignment": [
+		{
+			"Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+            "Groupdescription": "Test Groups for IAF AO testing",
+			"GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+			"GroupMode": "Include",
+			"Intent": "Available",
+			"Notification": "showAll"
+		}
+	]
+}

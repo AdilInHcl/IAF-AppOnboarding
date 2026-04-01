@@ -13,20 +13,19 @@
         "Description": "Azure CLI is a cross-platform command line tool, that is used to manage and administrate Microsoft Azure. It doesn’t replace PowerShell but provides an alternative to using managing Azure from the command line. You can still continue using PowerShell, the APIs, and the Azure Portal just like before. Azure CLI provides some tangible benefits over these, especially over PowerShell in that it’s very nimble and can be quickly installed on almost any platform.",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name:<AppID>_MS_MicrosoftAzureCLI_<Version>_PKG_R1",
-            "Package Type:Win 32 PSADT",
-            "App Architecture:64bit",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Optional",
-            "Release:R1",
-            "AMC/AVCC Status:Dev",
-            "AppID:<AppID>",
-			"FamilyID:FAM2124"
+            "Package Name: <AppID>_MS_MicrosoftAzureCLI_<Version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Optional",
+            "Release: R1",
+            "AMC/AVCC Status: Dev",
+            "AppID: <AppID>",
+            "FamilyID:FAM2124"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -54,47 +53,12 @@
     "Assignment": [
    {
         "Type": "Group",
-        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
         "Groupdescription": "Test Groups for IAF AO testing",
-        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
         "GroupMode": "Include",
         "Intent": "Available",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
-    },
-    {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-AzureCLI",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "0115fdb3-ef8c-4ef6-956e-d6f3fb52fa13",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-    },
-    {
-        "Type": "IATGroup",
-        "GroupName": "WPS-QS-AAD-APPL-AzureCL",
-        "Groupdescription": "QS group for Azure CLI",
-        "GroupID": "1143d48c-4a6b-401a-91c2-b251cfc9973e",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "AVC - All TEST Virtual PCs",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "AOTGroup",
-        "GroupName": "WPS-QS-AAD-APPL-AzureCL",
-        "Groupdescription": "QS group for Azure CLI",
-        "GroupID": "1143d48c-4a6b-401a-91c2-b251cfc9973e",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
+        "Notification": "showAll"
     }
 ]
 }

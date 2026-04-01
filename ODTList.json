@@ -1,41 +1,46 @@
 {
     "Apps": [
         {
-            "IntuneAppName": "MySQLWorkbench",
+            "IntuneAppName": "RegionalOE",
             "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
-            "AppPublisher": "Oracle",
-            "AppSource": "Winget",
-            "AppID": "Oracle.MySQLWorkbench",
-            "AppFolderName": "MySQLWorkbench",
-            "AppPath": [			
-				{
-                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Workbench 8.0 CE.lnk",
-                    "ProcessName": "MySQLWorkbench.exe"
-                }     
+            "AppPublisher": "Allianz",
+            "AppSource": "Evergreen",
+            "AppID": "RegionalOEApp",
+            "AppFolderName": "RegionalOE",
+            "AppPath": [
+                {
+                    "ShortcutPath": "NA",
+                    "ProcessName": "NA"
+                }
             ]
         },
         {
-            "IntuneAppName": "wireshark",
+            "IntuneAppName": "ViceVersaPro",
             "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
-            "AppPublisher": "Wireshark",
-            "AppSource": "Evergreen",
-            "AppID": "wireshark",
-            "AppFolderName": "Wireshark",
-            "FilterOptions": [
-                    {
-                    "Type": "msi",
-                    "Architecture": "x64",
-                    "Release": "Stable",
-                    "Version": "4.6.4"
-                    }
-                ],
+            "AppPublisher": "TGRMN",
+            "AppSource": "Winget",
+            "AppID": "TGRMNSoftware.ViceVersaPro",
+            "AppFolderName": "ViceVersaPro",
+            "AppDependency": "Yes",
             "AppPath": [
                 {
-                "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Wireshark.lnk",
-                "ProcessName": "Wireshark.exe"
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\ViceVersa Pro.lnk",
+                    "ProcessName": "ViceVersa.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\VVEngine Scheduler (Web Page).lnk",
+                    "ProcessName": "msedge.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\Tools\\VVLauncher.lnk",
+                    "ProcessName": "VVLauncher.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\Tools\\VVScheduler.lnk",
+                    "ProcessName": "VVScheduler.exe"
                 }
             ]
-        },        
+        },
         {
             "IntuneAppName": "Peazip",
             "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
@@ -43,11 +48,11 @@
             "AppSource": "Winget",
             "AppID": "Giorgiotani.Peazip",
             "AppFolderName": "Peazip",
-            "AppPath": [			
-				{
+            "AppPath": [
+                {
                     "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\PeaZip.lnk",
                     "ProcessName": "peazip.exe"
-                }, 
+                },
                 {
                     "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\PeaZip on the Web.lnk",
                     "ProcessName": "msedge.exe"
@@ -73,6 +78,28 @@
                     "ProcessName": "Configure PeaZip.exe"
                 }
             ]
-        }    
+        },
+        {
+            "IntuneAppName": "Wireshark",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Wireshark",
+            "AppSource": "Evergreen",
+            "AppID": "wireshark",
+            "AppFolderName": "Wireshark",
+            "FilterOptions": [
+                {
+                    "Type": "msi",
+                    "Architecture": "x64",
+                    "Release": "Stable",
+                    "Version": "4.6.3"
+                }
+            ],
+            "AppPath": [
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Wireshark.lnk",
+                    "ProcessName": "Wireshark.exe"
+                }
+            ]
+        }
     ]
 }

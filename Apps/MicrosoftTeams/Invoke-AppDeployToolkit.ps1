@@ -1,4 +1,4 @@
-﻿<#
+<#
 
 .SYNOPSIS
 PSAppDeployToolkit - This script performs the installation or uninstallation of an application(s).
@@ -111,7 +111,7 @@ $adtSession = @{
     APPID_Short = ""
 	InstallerName = '###SETUPFILENAME###'
     AppID = '###APPID###'
-    FamilyID = '3545'
+    FamilyID = '###FAMILYID###'
     Platform = 'AMC and AVC'
 
     # Install Titles (Only set here to override defaults set by the toolkit).
@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2026-2-11'     # Do not modify the DATE here, it should be 2026-2-11
+    DeployAppScriptDate = '2026-02-11'
 }
 
 function Install-ADTDeployment
@@ -146,6 +146,7 @@ function Install-ADTDeployment
         $Defertime = 900
         $DeferCount = 1
     }
+ 
     $saiwParams = @{
         AllowDefer = $true
         DeferTimes = $DeferCount
@@ -271,12 +272,12 @@ function Install-ADTDeployment
 	$version = Get-Appxpackage -Allusers -Name MSteams | Select-Object -ExpandProperty Version
     if(($version -lt $adtSession.AppVersion))
 	{
-    	if($null -eq $version){
+        if($null -eq $version){
         Write-ADTLogEntry -Message "No version of teams installed in the device. Hence, proceeding with upgradation Micosoft Teams application."
         }else{
     	Write-ADTLogEntry -Message "Installed Version ($version) is less than packaged version. Hence, proceeding with upgradation Micosoft Teams application."
-		}   
-                
+		}    	
+		
 		Stop-Process -Name "ms-teams" -Force -ErrorAction SilentlyContinue
 		
 		Set-NonRemovableAppsPolicy -Online -PackageFamilyName MSTeams_8wekyb3d8bbwe -NonRemovable 0 -ErrorAction SilentlyContinue
@@ -350,7 +351,6 @@ function Install-ADTDeployment
     }else {
       Write-ADTLogEntry -Message "Starting Microsoft Teams failed"     
     }
-  
 }
 
 function Uninstall-ADTDeployment
@@ -366,22 +366,6 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.
-    <#if($Nodefer){
-      $Defertime = 900
-      $DeferCount = 0  
-     
-    }else{
-        $Defertime = 900
-        $DeferCount = 1
-    }
- 
-    $saiwParams = @{
-        AllowDefer = $true
-        DeferTimes = $DeferCount
-        CheckDiskSpace = $true
-        PersistPrompt = $true
-        ForceCountdown = $Defertime
-    }#>
     if ($adtSession.AppProcessesToClose.Count -gt 0)
     {
         Show-ADTInstallationWelcome -CloseProcesses $adtSession.AppProcessesToClose -Silent

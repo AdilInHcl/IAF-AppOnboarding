@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2025-02-11'
+    DeployAppScriptDate = '2025-10-10'
 }
 
 function Install-ADTDeployment

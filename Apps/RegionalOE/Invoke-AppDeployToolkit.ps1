@@ -74,6 +74,9 @@ param
     [System.String]$Platform,
 
     [Parameter(Mandatory = $false)]
+    [Switch]$NoDefer,
+
+    [Parameter(Mandatory = $false)]
     [System.Management.Automation.SwitchParameter]$SuppressRebootPassThru,
 
     [Parameter(Mandatory = $false)]
@@ -119,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2025-10-10'
+    DeployAppScriptDate = '2026-2-11'     # Do not modify the DATE here, it should be 2026-2-11
 }
 
 function Install-ADTDeployment
@@ -135,17 +138,25 @@ function Install-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## Show Welcome Message, close processes if specified, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt.
+    if($Nodefer){
+      $Defertime = 900
+      $DeferCount = 0  
+     
+    }else{
+        $Defertime = 900
+        $DeferCount = 1
+    }
     $saiwParams = @{
         AllowDefer = $true
-        DeferTimes = 3
+        DeferTimes = $DeferCount
         CheckDiskSpace = $true
         PersistPrompt = $true
-        ForceCountdown = 600
+        ForceCountdown = $Defertime
     }
     if ($adtSession.AppProcessesToClose.Count -gt 0)
     {
         $saiwParams.Add('CloseProcesses', $adtSession.AppProcessesToClose)
-
+ 
         Show-ADTInstallationWelcome @saiwParams
     }
 
@@ -263,11 +274,29 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.
+    if($Nodefer){
+      $Defertime = 900
+      $DeferCount = 0  
+     
+    }else{
+        $Defertime = 900
+        $DeferCount = 1
+    }
+ 
+    $saiwParams = @{
+        AllowDefer = $true
+        DeferTimes = $DeferCount
+        CheckDiskSpace = $true
+        PersistPrompt = $true
+        ForceCountdown = $Defertime
+    }
     if ($adtSession.AppProcessesToClose.Count -gt 0)
     {
-        Show-ADTInstallationWelcome -CloseProcesses $adtSession.AppProcessesToClose -AllowDefer -DeferTimes 3 -ForceCountdown 600
+        $saiwParams.Add('CloseProcesses', $adtSession.AppProcessesToClose)
+ 
+        Show-ADTInstallationWelcome @saiwParams
     }
-
+    
     ## <Perform Pre-Uninstallation tasks here>
 
     

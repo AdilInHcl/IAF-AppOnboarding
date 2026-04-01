@@ -1,0 +1,64 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Keeper is a password vault to store your passwords and private information. The vault is synched between AVC, AMC and EMS.",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_KeeperSecurity_PasswordManager_<version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Optional",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM595"
+        ],
+        "Owner": "rainer.mahlo@allianz.de;aravind.sagar@allianz.com;vishnudevan.b@allianz.com",
+        "ScopeTagName":  [
+            "Service_AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Script",
+            "ScriptFile": "detection.ps1",
+            "EnforceSignatureCheck": "false",
+            "RunAs32Bit": "false"
+        }
+    ],
+    "Assignment": [
+		{
+			"Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+            "Groupdescription": "Test Groups for IAF AO testing",
+			"GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+			"GroupMode": "Include",
+			"Intent": "Available",
+			"Notification": "showAll"
+		}
+	]
+}

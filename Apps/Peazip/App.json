@@ -1,102 +1,73 @@
 {
-    "PackageInformation": {
-        "SetupType": "EXE",
-        "SetupFile": "Invoke-AppDeployToolkit.exe",
-        "SourceFolder": "Source",
-        "OutputFolder": "Package",
-        "IconFile": "Icon.png",
-        "IconURL": ""
-    },
-    "Information": {
-        "DisplayName": "<replaced_by_pipeline>",
-        "AppVersion": "<replaced_by_pipeline>",
-        "Description": "PeaZip is a free, open-source file archiver that supports over 180 formats. It offers easy file compression, extraction, encryption, and secure deletion with a simple interface. Available for Windows and Linux, it’s a versatile tool for managing and protecting your files.",
-        "Publisher": "<replaced_by_pipeline>",
-        "Notes": [
-            "Package Name: <AppID>_Giorgiotani_Peazip_<Version>_PKG_R1",
-            "Package Type: Win 32 PSADT",
-            "Deployment Engineer: Intune App Factory",
-            "Deployment Date: <Date>",
-            "Deployment Method: Optional",
-            "Release: R1",
-            "AMC/AVCC Status: DEV",
-            "AppId: <AppID>",
-			"FamilyID:FAM2796"
-        ],
-        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
-        "ScopeTagName":  [
-            "AMC",
-            "Service_AVC"
-        ]
-    },
-    "Program": {
-        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
-        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
-        "InstallExperience": "system",
-        "DeviceRestartBehavior": "suppress",
-        "AllowAvailableUninstall": "true"
-    },
-    "RequirementRule": {
-        "MinimumSupportedWindowsRelease": "W11_22H2",
-        "Architecture": "All"
-    },
-    "CustomRequirementRule": [
+  "PackageInformation": {
+    "SetupType": "EXE",
+    "SetupFile": "Invoke-AppDeployToolkit.exe",
+    "SourceFolder": "Source",
+    "OutputFolder": "Package",
+    "IconFile": "Icon.png",
+    "IconURL": ""
+  },
+  "Information": {
+    "DisplayName": "<replaced_by_pipeline>",
+    "AppVersion": "<replaced_by_pipeline>",
+    "Description": "PeaZip is a free, open-source file archiver that supports over 180 formats. It offers easy file compression, extraction, encryption, and secure deletion with a simple interface. Available for Windows and Linux, it’s a versatile tool for managing and protecting your files.",
+    "Publisher": "<replaced_by_pipeline>",
+    "Notes": [
+      "Package Name:<AppID>_Giorgiotani_Peazip_<Version>_PKG_R1",
+      "Package Type:Win 32 PSADT",
+      "Deployment Engineer:Intune App Factory",
+      "Deployment Date:<Date>",
+      "Deployment Method:Optional",
+      "Release:R1",
+      "AMC/AVCC Status:DEV",
+      "AppID:<AppID>",
+      "FamilyID:FAM2796"
     ],
-    "DetectionRule": [
-        {
-            "Type": "File",
-            "DetectionMethod": "Version",
-            "Path": "C:\\Program Files\\PeaZip",
-            "FileOrFolder": "peazip.exe",
-            "Operator": "greaterThanOrEqual",
-            "VersionValue": "<replaced_by_pipeline>",
-            "Check32BitOn64System": "false"
-        }
-    ],
-    "Assignment": [
+    "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+    "ScopeTagName": ["Service_AMC", "Service_AVC"],
+    "DependencyAppList": [
+      {
+        "DisplayName": "Oracle MySQLWorkbench 8.0.45",
+        "AppId": "a7599bb1-f41e-411b-a307-99a8b165db"
+      },
+      {
+        "DisplayName": "Allianz RegionalOE 1.0.0",
+        "AppId": "dd560900-d7f7-41fb-bb11-beb62a794368"
+      }
+    ]
+  },
+  "Program": {
+    "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+    "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+    "InstallExperience": "system",
+    "DeviceRestartBehavior": "suppress",
+    "AllowAvailableUninstall": "true"
+  },
+  "RequirementRule": {
+    "MinimumSupportedWindowsRelease": "W11_22H2",
+    "Architecture": "All"
+  },
+  "CustomRequirementRule": [],
+  "DetectionRule": [
     {
-        "Type": "Group",
-        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-        "Groupdescription": "Test Groups for IAF AO testing",
-        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-        "GroupMode": "Include",
-        "Intent": "Available",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
-    },
+      "Type": "File",
+      "DetectionMethod": "Version",
+      "Path": "C:\\Program Files\\PeaZip",
+      "FileOrFolder": "peazip.exe",
+      "Operator": "greaterThanOrEqual",
+      "VersionValue": "<replaced_by_pipeline>",
+      "Check32BitOn64System": "false"
+    }
+  ],
+  "Assignment": [
     {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-Peazip",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "1bbda45f-36b0-48b6-854d-6229eb0e8798",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-    },
-    {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-APPL-IAFProd-TestApps",
-            "Groupdescription": "Test Groups for IAF Apps IAT testing",
-            "GroupID": "5f857b5c-0fd2-4ef3-90d6-d4eb06ad6e9b",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-APPL-IAFProd-TestApps",
-            "Groupdescription": "Test Groups for IAF Apps AO testing",
-            "GroupID": "5f857b5c-0fd2-4ef3-90d6-d4eb06ad6e9b",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-        }
-]
+      "Type": "Group",
+      "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+      "Groupdescription": "Test Groups for IAF AO testing",
+      "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+      "GroupMode": "Include",
+      "Intent": "Available",
+      "Notification": "showAll"
+    }
+  ]
 }

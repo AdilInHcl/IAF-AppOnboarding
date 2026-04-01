@@ -1,0 +1,64 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "ViceVersa PRO is a comprehensive Windows-based file synchronization, backup, and replication tool designed for managing, comparing, and backing up data across local drives, networks, USB keys, and cloud storage.",
+        "Publisher": "<replaced_by_pipeline>",
+		"Notes": [
+            "Package Name: <AppID>_TGRMN_ViceVersaPro_<Version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Global",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
+			"FamilyID:FAM1772"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "Service_AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "MSI",
+            "ProductCode": "<replaced_by_pipeline>",
+            "ProductVersionOperator": "Equal",
+            "ProductVersion": "<replaced_by_pipeline>"
+        }
+    ],
+     "Assignment": [
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll"
+    }
+]
+}

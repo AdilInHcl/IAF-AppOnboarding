@@ -13,19 +13,19 @@
         "Description": "Visual Studio Code, also commonly referred to as VS Code, is a source-code editor developed by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.",
         "Publisher": "<replaced_by_pipeline>",
 		"Notes": [
-            "Package Name:<AppID>_Microsoft_VisualStudioCode_<Version>_PKG_R1",
-            "Package Type:Win 32 PSADT",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Global",
-            "Release:R1",
-            "AMC/AVCC Status:DEV",
-            "AppID:<AppID>",
+            "Package Name: <AppID>_Microsoft_VisualStudioCode_<Version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Global",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
 			"FamilyID:FAM463"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -44,59 +44,24 @@
     ],
     "DetectionRule": [
         {
-            "Type": "Registry",
-            "DetectionMethod": "VersionComparison",
-            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\AllianzPackages\\Microsoft_VisualStudioCode_PKG",
-            "ValueName": "Version",
+            "Type": "File",
+            "DetectionMethod": "Version",
+            "Path": "C:\\Program Files\\Microsoft VS Code",
+            "FileOrFolder": "Code.exe",
             "Operator": "Equal",
-            "Value": "<replaced_by_pipeline>",
+            "VersionValue": "<replaced_by_pipeline>",
             "Check32BitOn64System": "false"
         }
     ],
-    "Assignment": [
-        {
-             "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-             "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-             "GroupMode": "Include",
-             "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-         },
-         {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-VSCode",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "a502c268-0f8d-4760-b2a7-a7c0cbbd0215",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-VisualStudioCode",
-            "Groupdescription": "QS group for Visual Studio Code",
-            "GroupID": "b3b4695f-0ffb-47de-b6cd-e2b1ea2d5460",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-VisualStudioCode",
-            "Groupdescription": "QS group for Visual Studio Code",
-            "GroupID": "b3b4695f-0ffb-47de-b6cd-e2b1ea2d5460",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-        }
-     ]
+     "Assignment": [
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll"
+    }
+]
 }

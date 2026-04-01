@@ -113,7 +113,7 @@ $adtSession = @{
     AppID = '###APPID###'
     FamilyID = '###FAMILYID###'
     Platform = 'AMC and AVC'
-
+  
     # Install Titles (Only set here to override defaults set by the toolkit).
     InstallName = ""
     InstallTitle = " "
@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2025-10-10'
+    DeployAppScriptDate = '2026-02-11'
 }
 
 function Install-ADTDeployment
@@ -136,8 +136,8 @@ function Install-ADTDeployment
     ## MARK: Pre-Install
     ##================================================
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
-    
-    ## Show Welcome Message, close processes if specified, allow up to 1 deferrals, verify there is enough disk space to complete the install, and persist the prompt.
+
+    ## Show Welcome Message, close processes if specified, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt.
     if($Nodefer){
       $Defertime = 900
       $DeferCount = 0  
@@ -160,10 +160,7 @@ function Install-ADTDeployment
  
         Show-ADTInstallationWelcome @saiwParams
     }
-
-        Show-ADTInstallationWelcome -CloseProcesses @{Name = "Articulate 360 Desktop Service"},@{Name = "Articulate 360 Installer Service"}  -Silent
-
-
+    Show-ADTInstallationWelcome -CloseProcesses @{Name = "Articulate 360 Desktop Service"},@{Name = "Articulate 360 Installer Service"} -Silent
     ## <Perform Pre-Installation tasks here>
 	
     Get-ChildItem -Path "$($adtSession.DirFiles)" -Recurse -ErrorAction SilentlyContinue | Unblock-File

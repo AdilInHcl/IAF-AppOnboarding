@@ -1,7 +1,7 @@
 Function Get-Acrobat {
     <#
         .SYNOPSIS
-            Get the current version and download URL for Adobe Acrobat PRO DC.
+            Get the current version and download URL for Adobe Acrobat Pro
 
         .NOTES
             Site:

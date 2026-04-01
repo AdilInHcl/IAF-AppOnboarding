@@ -2,7 +2,7 @@
 	"Name": "HarmonIE",
 	"Source": "https://www.HarmonIE.com",
 	"Get": {
-		"Uri": "https://github.developer.allianz.io/api/v3/repos/WorkplaceServices/IAF-Custom-FAM2999-HarmonIE-365/releases/latest",
+		"Uri": "https://github.developer.allianz.io/api/v3/repos/intune-appfactory-Packages/HarmonIE/releases/latest",
 		"MatchVersion": "(\\d+(\\.\\d+){1,4}).*",
 		"MatchFileTypes": "\\.exe$|\\.msi$|\\.zip$"
 	},

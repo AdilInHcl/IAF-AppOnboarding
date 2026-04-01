@@ -1,14 +1,19 @@
 {
-    "Apps": [
-            {
-                "IntuneAppName":  "Peazip",
-                "AppPublisher":  "Giorgiotani",
-                "AppSetupVersion":  ""
-            },
-            {
-                "IntuneAppName":  "Peazip",
-                "AppPublisher":  "Giorgiotani",
-                "AppSetupVersion":  ""
-            }
-        ]
+  "Apps": [
+    {
+            "IntuneAppName":  "RegionalOE",
+            "AppPublisher":  "Allianz",
+            "AppSetupVersion":  ""
+    },
+    {
+            "IntuneAppName":  "Putty",
+            "AppPublisher":  "SimonTatham",
+            "AppSetupVersion":  ""
+    },
+    {
+            "IntuneAppName":  "wireshark",
+            "AppPublisher":  "wireshark",
+            "AppSetupVersion":  ""
+    }
+  ]
 }

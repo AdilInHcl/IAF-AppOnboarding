@@ -13,7 +13,7 @@
         "Description": "Citrix Workspace App provides access to AVC from external AMCs via MFA",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name:<AppID>_Citrix_Workspace_<Version>_PKG_R1",
+            "Package Name:<AppID>_Citrix_Workspace2503_<Version>_PKG_R1",
             "Package Type:Win 32 PSADT",
             "Deployment Engineer:Intune App Factory",
             "Deployment Date:<Date>",
@@ -25,8 +25,18 @@
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
+        ],
+        "DependencyAppList": [
+        {
+            "DisplayName": "Oracle MySQLWorkbench 8.0.44",
+            "AppId": "8db12ac8-a421-4cda-986e-a83d89913ea7"
+        },
+        {
+            "DisplayName": "Allianz RegionalOE 1.0.0",
+            "AppId": "dd560900-d7f7-41fb-bb11-beb62a794368"
+        }
         ]
     },
     "Program": {
@@ -44,60 +54,24 @@
     ],
     "DetectionRule": [
         {
-            "Type": "File",
-            "DetectionMethod": "Version",
-            "Path": "C:\\Program Files (x86)\\Citrix\\ICA Client\\Legacy",
-            "FileOrFolder": "CDViewer.exe",
-            "Operator": "greaterThanOrEqual",
-            "VersionValue": "<replaced_by_pipeline>",
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\CitrixOnlinePluginPackWeb",
+            "ValueName": "DisplayVersion",
+            "Operator": "Equal",
+            "Value": "<replaced_by_pipeline>",
             "Check32BitOn64System": "false"
         }
     ],
     "Assignment": [
    {
         "Type": "Group",
-        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
         "Groupdescription": "Test Groups for IAF AO testing",
-        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
         "GroupMode": "Include",
         "Intent": "Available",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
-
-    },
-    {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-CitrixWorkspace",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "676d2e3f-cde7-4615-84e3-936792eff935",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-    },
-    	{
-        "Type": "IATGroup",
-        "GroupName": "WPS-QS-AAD-APPL-CitrixWorkspace",
-        "Groupdescription": "QS Group for CWA",
-        "GroupID": "62f42e89-9171-4fcc-ace1-c88bf650dd19",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "AVC - All TEST Virtual PCs",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "AOTGroup",
-        "GroupName": "WPS-QS-AAD-APPL-CitrixWorkspace",
-        "Groupdescription": "QS Group for CWA",
-        "GroupID": "62f42e89-9171-4fcc-ace1-c88bf650dd19",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
+        "Notification": "showAll"
     }
 ]
 }

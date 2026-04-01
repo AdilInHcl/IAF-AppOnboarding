@@ -13,23 +13,23 @@
         "Description": "Wireshark lets you dive deep into your network traffic - free and open source.",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name: <AppID>_Wireshark_Wireshark_<Version>_PKG_R1",
+            "Package Name: <AppID>_Wireshark_Wireshark_<version>_PKG_R1",
             "Package Type: Win 32 PSADT",
             "Deployment Engineer: Intune App Factory",
             "Deployment Date: <Date>",
             "Deployment Method: Optional",
             "Release: R1",
-            "AMC/AVCC Status: DEV",
-            "AppId: <AppID>",
-			"FamilyID:FAM2796"
+            "AMC/AVCC Status: DEV ",
+            "AppID: <AppID>",
+			"FamilyID:FAM2798"
         ],
-        "Owner": "extern.ansari_mo-adil@allianz.de;extern.vandana_pridhviraj1@allianz.de",
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
-     "Program": {
+    "Program": {
         "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
         "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
         "InstallExperience": "system",
@@ -53,47 +53,12 @@
     "Assignment": [
    {
         "Type": "Group",
-        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
         "Groupdescription": "Test Groups for IAF AO testing",
-        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
         "GroupMode": "Include",
         "Intent": "Available",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "Group",
-        "GroupName": "WPS-LE-DEVICE-APPL-WIN-Wireshark",
-        "Groupdescription": "Test Groups for IAF LE Smoke testing",
-        "GroupID": "0d3c1399-4152-4dc6-9ec5-3f05b888e2d1",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "",
-        "FilterMode": ""
-    },
-    {
-        "Type": "IATGroup",
-        "GroupName": "WPS-QS-APPL-IAFProd-TestApps",
-        "Groupdescription": "Test Groups for IAF Apps IAT testing",
-        "GroupID": "5f857b5c-0fd2-4ef3-90d6-d4eb06ad6e9b",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "AVC - All TEST Virtual PCs",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "AOTGroup",
-        "GroupName": "WPS-QS-APPL-IAFProd-TestApps",
-        "Groupdescription": "Test Groups for IAF Apps AO testing",
-        "GroupID": "5f857b5c-0fd2-4ef3-90d6-d4eb06ad6e9b",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
+        "Notification": "showAll"
     }
 ]
 }

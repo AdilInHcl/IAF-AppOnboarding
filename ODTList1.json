@@ -1,24 +1,64 @@
 {
-    "Apps": [        
+    "Apps": [
         {
-            "IntuneAppName": "AzureCLI",
+            "IntuneAppName": "Wireshark",
             "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
-            "AppPublisher": "Microsoft",
+            "AppPublisher": "Wireshark",
             "AppSource": "Evergreen",
-            "AppID": "MicrosoftAzureCLI",
-            "AppFolderName": "AzureCLI",
+            "AppID": "wireshark",
+            "AppFolderName": "Wireshark",
             "FilterOptions": [
                 {
+                    "Type": "msi",
                     "Architecture": "x64",
-                    "Type": "msi"
+                    "Release": "Stable",
+                    "Version": "4.6.3"
                 }
             ],
+            "AppPath": [
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Wireshark.lnk",
+                    "ProcessName": "Wireshark.exe"
+                }
+            ]
+        },
+        {
+            "IntuneAppName": "Peazip",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Giorgiotani",
+            "AppSource": "Winget",
+            "AppID": "Giorgiotani.Peazip",
+            "AppFolderName": "Peazip",
             "AppPath": [			
 				{
-                    "ShortcutPath": "NAghfhf",
-                    "ProcessName": "NA"
-                }     
-            ]           
-        }  
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\PeaZip.lnk",
+                    "ProcessName": "peazip.exe"
+                }, 
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\PeaZip on the Web.lnk",
+                    "ProcessName": "msedge.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\Open as archive.lnk",
+                    "ProcessName": "peazip.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\Extract....lnk",
+                    "ProcessName": "peazip.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\Extract here (smart new folder).lnk",
+                    "ProcessName": "peazip.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\Configure PeaZip.lnk",
+                    "ProcessName": "peazip.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PeaZip\\Add to archive....lnk",
+                    "ProcessName": "Configure PeaZip.exe"
+                }
+            ]
+        }    
     ]
 }

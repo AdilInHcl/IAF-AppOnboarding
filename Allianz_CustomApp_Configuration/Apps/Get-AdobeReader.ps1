@@ -1,7 +1,7 @@
 Function Get-AdobeReader {
     <#
         .SYNOPSIS
-            Get the current version and download URL for Adobe Acrobat Reader.
+            Get the current version and download URL for Adobe Acrobat reader.
 
         .NOTES
             Site:

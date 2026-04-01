@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<SnippetCollection Format="1.0.0"><Language Lang="SQL" Guid="{C4D96929-A9B0-42CC-B3E0-ADAC0435D7F2}">
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Function\</DirPath>
+			<LocalizedName>Function</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Index\</DirPath>
+			<LocalizedName>Index</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Login\</DirPath>
+			<LocalizedName>Login</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Role\</DirPath>
+			<LocalizedName>Role</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Schema\</DirPath>
+			<LocalizedName>Schema</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Stored Procedure\</DirPath>
+			<LocalizedName>Stored Procedure</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Synonym\</DirPath>
+			<LocalizedName>Synonym</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Table\</DirPath>
+			<LocalizedName>Table</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\Trigger\</DirPath>
+			<LocalizedName>Trigger</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\User\</DirPath>
+			<LocalizedName>User</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\User Defined Data Type\</DirPath>
+			<LocalizedName>User Defined Data Type</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\User Defined Table Type\</DirPath>
+			<LocalizedName>User Defined Table Type</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\User Defined Type\</DirPath>
+			<LocalizedName>User Defined Type</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>Off</OnOff>
+			<Installed>true</Installed>
+			<Locale>LOCALE_ID</Locale>
+			<DirPath>%InstallRoot%\VSTSDB\Snippets\%LCID%\View\</DirPath>
+			<LocalizedName>View</LocalizedName>
+		</SnippetDir>
+		<SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\</DirPath><LocalizedName>Function</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\Begin End.snippet</Path><LocalizedName>Begin</LocalizedName><Title>Begin</Title><Shortcut></Shortcut><Description>Code Snippet for Begin...End block.</Description><Author>Microsoft Corporation</Author><SnippetType>SurroundsWith</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\Create Inline Table Function.snippet</Path><LocalizedName>Create Inline Table Function</LocalizedName><Title>Create Inline Table Function</Title><Shortcut></Shortcut><Description>Creates an inline table function.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\Create Multi-Statement Table Function.snippet</Path><LocalizedName>Create Multi-Statement Table Function</LocalizedName><Title>Create Multi-Statement Table Function</Title><Shortcut></Shortcut><Description>Creates a multi-statement table function.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\Create Scalar Function.snippet</Path><LocalizedName>Create Scalar Function</LocalizedName><Title>Create Scalar Function</Title><Shortcut></Shortcut><Description>Creates a scalar function.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\If.snippet</Path><LocalizedName>If</LocalizedName><Title>If</Title><Shortcut></Shortcut><Description>Code Snippet for If construct.</Description><Author>Microsoft Corporation</Author><SnippetType>SurroundsWith</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Function\While.snippet</Path><LocalizedName>While</LocalizedName><Title>While</Title><Shortcut></Shortcut><Description>Code Snippet for While loop.</Description><Author>Microsoft Corporation</Author><SnippetType>SurroundsWith</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Index\</DirPath><LocalizedName>Index</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Index\Create Index Basic.snippet</Path><LocalizedName>Create Index Basic</LocalizedName><Title>Create Index Basic</Title><Shortcut></Shortcut><Description>Creates a simple, non-clustered index.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Index\Create Primary XML Index.snippet</Path><LocalizedName>Create Primary XML Index</LocalizedName><Title>Create Primary XML Index</Title><Shortcut></Shortcut><Description>Creates a primary XML index.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Index\Create Unique Non-Clustered Index.snippet</Path><LocalizedName>Create Unique Non-Clustered Index</LocalizedName><Title>Create Unique Non-Clustered Index</Title><Shortcut></Shortcut><Description>Creates a unique, non-clustered index.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Login\</DirPath><LocalizedName>Login</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Login\Create SQL Authentication Login.snippet</Path><LocalizedName>Create SQL Authentication Login</LocalizedName><Title>Create SQL Authentication Login</Title><Shortcut></Shortcut><Description>Creates a SQL Server Authentication login.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Login\Create Windows Authentication Login.snippet</Path><LocalizedName>Create Windows Authentication Login</LocalizedName><Title>Create Windows Authentication Login</Title><Shortcut></Shortcut><Description>Creates a Windows Authentication login.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Role\</DirPath><LocalizedName>Role</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Role\Create Database Role.snippet</Path><LocalizedName>Create Database Role</LocalizedName><Title>Create Database Role</Title><Shortcut></Shortcut><Description>Creates a database role.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Schema\</DirPath><LocalizedName>Schema</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Schema\Create Schema.snippet</Path><LocalizedName>Create Schema</LocalizedName><Title>Create Schema</Title><Shortcut></Shortcut><Description>Creates a database schema.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Stored Procedure\</DirPath><LocalizedName>Stored Procedure</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Stored Procedure\Create Procedure With Output Cursor.snippet</Path><LocalizedName>Create Procedure with CURSOR OUTPUT Parameter</LocalizedName><Title>Create Procedure with CURSOR OUTPUT Parameter</Title><Shortcut></Shortcut><Description>Creates a stored procedure that has a Cursor output parameter.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Stored Procedure\Create Procedure with Output Parameters.snippet</Path><LocalizedName>Create Procedure with OUTPUT Parameter</LocalizedName><Title>Create Procedure with OUTPUT Parameter</Title><Shortcut></Shortcut><Description>Creates a stored procedure that has an output parameter.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Stored Procedure\Create Stored Procedure.snippet</Path><LocalizedName>Create Procedure Basic Template</LocalizedName><Title>Create Procedure Basic Template</Title><Shortcut></Shortcut><Description>Creates a simple stored procedure.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Synonym\</DirPath><LocalizedName>Synonym</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Synonym\Create Synonym.snippet</Path><LocalizedName>Create Synonym</LocalizedName><Title>Create Synonym</Title><Shortcut></Shortcut><Description>Creates a synonym.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Table\</DirPath><LocalizedName>Table</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Table\Create Table.snippet</Path><LocalizedName>Create Table</LocalizedName><Title>Create Table</Title><Shortcut></Shortcut><Description>Creates a table.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Trigger\</DirPath><LocalizedName>Trigger</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\Trigger\Create Trigger.snippet</Path><LocalizedName>Create Trigger</LocalizedName><Title>Create Trigger</Title><Shortcut></Shortcut><Description>Creates a trigger.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User\</DirPath><LocalizedName>User</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User\Create User as DBO.snippet</Path><LocalizedName>Create User as DBO</LocalizedName><Title>Create User as DBO</Title><Shortcut></Shortcut><Description>Creates a database user.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User Defined Data Type\</DirPath><LocalizedName>User Defined Data Type</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User Defined Data Type\Create User-Defined Data Type.snippet</Path><LocalizedName>Create User-Defined Data Type</LocalizedName><Title>Create User-Defined Data Type</Title><Shortcut></Shortcut><Description>Creates a user-defined data type.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User Defined Table Type\</DirPath><LocalizedName>User Defined Table Type</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User Defined Table Type\Create User-Defined Table Type.snippet</Path><LocalizedName>Create User-Defined Table Type</LocalizedName><Title>Create User-Defined Table Type</Title><Shortcut></Shortcut><Description>Creates a user-defined table type.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User Defined Type\</DirPath><LocalizedName>User Defined Type</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\User Defined Type\Create User-Defined Type.snippet</Path><LocalizedName>Create User-Defined Type</LocalizedName><Title>Create User-Defined Type</Title><Shortcut></Shortcut><Description>Creates a CLR integration user-defined type.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\View\</DirPath><LocalizedName>View</LocalizedName><CodeSnippet><Path>%InstallRoot%\Common7\IDE\SQL\Snippets\%LCID%\View\Create View.snippet</Path><LocalizedName>Create View</LocalizedName><Title>Create View</Title><Shortcut></Shortcut><Description>Creates a view.</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType></CodeSnippet></SnippetDir><SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>C:\Users\rootadmin\Documents\SQL Server Management Studio\Code Snippets\SQL\My Code Snippets\</DirPath><LocalizedName>My Code Snippets</LocalizedName></SnippetDir></Language>
+</SnippetCollection>

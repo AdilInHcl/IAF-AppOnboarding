@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2026-2-11'     # Do not modify the DATE here, it should be 2026-2-11
+    DeployAppScriptDate = '2026-02-11'
 }
 
 function Install-ADTDeployment
@@ -146,6 +146,7 @@ function Install-ADTDeployment
         $Defertime = 900
         $DeferCount = 1
     }
+ 
     $saiwParams = @{
         AllowDefer = $true
         DeferTimes = $DeferCount
@@ -241,7 +242,7 @@ function Install-ADTDeployment
 
     Copy-ADTFile -Path "$($adtSession.DirFiles)\$($adtSession.InstallerName)" -Destination "$envProgramData\Jabra\" 
     
-    $ARPs = Get-ADTApplication -Name 'Jabra Direct' | Where-Object { $_.SystemComponent -like "False" }
+    $ARPs = Get-ADTApplication -Name 'Jabra Direct'
     if (Compare-Version $($adtSession.AppVersion) $ARPs.DisplayVersion "eq") {
         Branding-Key -Action "Create"
         If($Platform -eq "RAPPS"){ Set-ADTRegistryKey -Key "HKEY_LOCAL_MACHINE\SOFTWARE\AllianzPackages\$($adtSession.AppVendor)_$($adtSession.AppName)_PKG" -Name "Platform" -Value "AMC & AVC & RAPPS" -Type String }
@@ -264,28 +265,6 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.    
-    <#if($Nodefer){
-      $Defertime = 900
-      $DeferCount = 0  
-     
-    }else{
-        $Defertime = 900
-        $DeferCount = 1
-    }
- 
-    $saiwParams = @{
-        AllowDefer = $true
-        DeferTimes = $DeferCount
-        CheckDiskSpace = $true
-        PersistPrompt = $true
-        ForceCountdown = $Defertime
-    }
-    if ($adtSession.AppProcessesToClose.Count -gt 0)
-    {
-        $saiwParams.Add('CloseProcesses', $adtSession.AppProcessesToClose)
- 
-        Show-ADTInstallationWelcome @saiwParams
-    }#>
 
     ## <Perform Pre-Uninstallation tasks here>
 
@@ -321,7 +300,7 @@ function Uninstall-ADTDeployment
     Remove-ADTFolder -Path "$envProgramData\Jabra"
     Remove-ADTFolder -Path "$envSystemDrive\Users\Default\AppData\Roaming\Jabra Direct"
 
-    $ARPs = Get-ADTApplication -Name 'Jabra Direct' | Where-Object { $_.SystemComponent -like "False" }
+    $ARPs = Get-ADTApplication -Name 'Jabra Direct'
     if (Compare-Version $($adtSession.AppVersion) $ARPs.DisplayVersion "eq") {Write-ADTLogEntry -Message "Jabra Direct app found, Skipping Branding deletion"}
     else{Branding-Key -Action "Delete"}
 

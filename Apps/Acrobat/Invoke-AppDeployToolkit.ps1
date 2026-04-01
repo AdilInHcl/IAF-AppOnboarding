@@ -1,4 +1,4 @@
-<#
+﻿<#
 
 .SYNOPSIS
 PSAppDeployToolkit - This script performs the installation or uninstallation of an application(s).
@@ -223,11 +223,11 @@ function Install-ADTDeployment
     $FullInstallationRequired = $False
     $FullUninstallationRequired = $False
     $MSPSetupFileName = Get-ChildItem -Path "$($adtSession.DirFiles)" -File -Recurse | Where-Object { $PSItem.Extension -like ".msp"} | Where-Object { $PSItem.Name -like "AcrobatDCUpd*"} | Sort-Object -Property "LastModified" -Descending | Select-Object -First 1
-    If ($null -ne $MSPSetupFileName){Write-ADTLogEntry -Message "MSP Patch file: $($MSPSetupFileName.FullName)"}
+    If ($MSPSetupFileName -ne $null){Write-ADTLogEntry -Message "MSP Patch file: $($MSPSetupFileName.FullName)"}
     Else {Write-ADTLogEntry -Message "MSP Patch file NOT FOUND! Terminating..." -Severity 3 ; Close-ADTSession -ExitCode 9999}
         
     $ARP = Get-ADTApplication -Name @("Adobe Acrobat DC", "Adobe Acrobat") -NameMatch 'Exact'
-    If ($null -ne $ARP){
+    If ($ARP -ne $null){
         If ($($ARP.DisplayVersion) -lt $($adtSession.AppVersion)) {
             Write-ADTLogEntry -Message "Currently installed version: $($ARP.DisplayVersion) is lower than expected version: $($adtSession.AppVersion). Proceeding with Patch installation."
             If(Test-Path -Path "$($MSPSetupFileName.FullName)") {Start-ADTMsiProcess -Action 'Patch' -FilePath "$($MSPSetupFileName.FullName)" -IgnoreExitCodes *}
@@ -295,7 +295,7 @@ function Install-ADTDeployment
 
     Set-ADTRegistryKey -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown' -Name 'bMIPExternalAuthAdmin' -Type 'DWord' -Value '0'
     Set-ADTRegistryKey -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Adobe Acrobat\Trunk\FeatureLockDown' -Name 'bEnableDKEAdmin' -Type 'DWord' -Value '1'
-    
+
     Remove-ADTRegistryKey -Key "HKLM\Software\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" -Name "bProtectedMode"
     Remove-ADTRegistryKey -Key "HKLM\Software\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" -Name "bEnhancedSecurityInBrowser"
     Remove-ADTRegistryKey -Key "HKLM\Software\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" -Name "bEnhancedSecurityStandalone"
@@ -310,7 +310,7 @@ function Install-ADTDeployment
     #<Branding Registry>
     ##====================
 
-    $ARPs = Get-ADTApplication -Name 'Adobe Acrobat' -NameMatch 'Exact'
+    $ARPs = Get-ADTApplication -Name 'Adobe Acrobat'
     if (Compare-Version $($adtSession.AppVersion) $ARPs.DisplayVersion "eq") {
         Branding-Key -Action "Create"
         If($Platform -eq "RAPPS"){ Set-ADTRegistryKey -Key "HKEY_LOCAL_MACHINE\SOFTWARE\AllianzPackages\$($adtSession.AppVendor)_$($adtSession.AppName)_PKG" -Name "Platform" -Value "AMC & AVC & RAPPS" -Type String }
@@ -332,7 +332,18 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.
-    
+    if($NoDefer){
+      $Defertime = 900
+      $DeferCount = 0  
+     
+    }else{
+        $Defertime = 900
+        $DeferCount = 1
+    }
+    if ($adtSession.AppProcessesToClose.Count -gt 0)
+    {
+        #Show-ADTInstallationWelcome -CloseProcesses $adtSession.AppProcessesToClose -AllowDefer -DeferTimes $DeferCount -ForceCountdown $DeferTime
+    }
 
     ## <Perform Pre-Uninstallation tasks here>
 
@@ -381,7 +392,7 @@ function Uninstall-ADTDeployment
     If((Test-Path -Path "$ObjectPath\Acrobat DC") -and ((Get-ChildItem $ObjectPath -ErrorAction SilentlyContinue | Measure-Object).Count -eq 0)) {Remove-ADTFolder -Path "$ObjectPath\Acrobat DC"}
     If((Test-Path -Path $ObjectPath) -and ((Get-ChildItem $ObjectPath -ErrorAction SilentlyContinue | Measure-Object).Count -eq 0)) {Remove-ADTFolder -Path $ObjectPath}
 
-    $ARPs = Get-ADTApplication -Name 'Adobe Acrobat' -NameMatch 'Exact'
+    $ARPs = Get-ADTApplication -Name 'Adobe Acrobat'
     if (Compare-Version $($adtSession.AppVersion) $ARPs.DisplayVersion "eq") {Write-ADTLogEntry -Message "Adobe Acrobat Pro app found, Skipping Branding deletion"}
     else{Branding-Key -Action "Delete"}
 

@@ -13,19 +13,19 @@
         "Description": "Microsoft Teams is a collaboration tool included with the Microsoft 365 pack.",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name:<AppID>_Microsoft_Teams_<Version>_PKG_R1",
-            "Package Type:Win 32 PSADT",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Optional",
-            "Release:R1",
-            "AMC/AVCC Status:DEV",
-            "AppID:<AppID>",
-			"FamilyID:FAM3545"
+            "Package Name: <AppID>_Microsoft_Teams_<version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Optional",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
+			"FamilyID: FAM3545"
         ],
         "Owner": "nidhin.nandakumar@allianz.com;sarin.john-r-s@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -52,48 +52,13 @@
     ],
     "Assignment": [
 		{
-             "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-             "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-             "GroupMode": "Include",
-             "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-        },
-        {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-MicrosoftTeam",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "3c3c31c9-f61e-4e77-aa4e-1ebfb2bcb14c",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-MSTEAMS",
-            "Groupdescription": "QS group for Microsoft Teams",
-            "GroupID": "4dc68e21-79b5-4fa3-8788-d6d578af29ee",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-MSTEAMS",
-            "Groupdescription": "QS group for Microsoft Teams",
-            "GroupID": "4dc68e21-79b5-4fa3-8788-d6d578af29ee",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-        }
+			"Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+            "Groupdescription": "Test Groups for IAF AO testing",
+			"GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+			"GroupMode": "Include",
+			"Intent": "Available",
+			"Notification": "showAll"
+		}
 	]
 }

@@ -13,19 +13,19 @@
         "Description": "The Konnekt app for Microsoft 365 allows users to access and display SharePoint sites directly in File Explorer in widnows, making it easier to manage and navigate files stored in SharePoint alongside local and other cloud files.",
         "Publisher": "<replaced_by_pipeline>",
 		"Notes": [
-            "Package Name<AppID>_Glueckkanja_Konnekt_<Version>_PKG_R1",
+            "Package Name: <AppID>_Glueckkanja_Konnekt_<Version>_PKG_R1",
             "Package Type: Win 32 PSADT",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Global",
-            "Release:R1",
-            "AMC/AVCC Status:DEV",
-            "AppID:<AppID>",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Global",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
 			"FamilyID:FAM2021"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -51,49 +51,14 @@
         }
     ],
     "Assignment": [
-        {
-             "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-             "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-             "GroupMode": "Include",
-             "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-         },
-         {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-Konnekt",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "3f14264b-b35e-4698-a744-83db4171e90b",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-KONNEKT",
-            "Groupdescription": "QS group for Konnekt",
-            "GroupID": "d07fe022-9fed-476e-9b4f-d8269c96ca13",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-KONNEKT",
-            "Groupdescription": "QS group for Konnekt",
-            "GroupID": "d07fe022-9fed-476e-9b4f-d8269c96ca13",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-        }
-    ]
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll"
+    }
+]
 }

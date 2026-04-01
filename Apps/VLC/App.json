@@ -13,18 +13,18 @@
         "Description": "VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name:<AppID>_VideoLAN_VLCMediaPlayer_<Version>_PKG_R1",
-            "Package Type:Win32 PSADT",
-            "Deployment Engineer:IntuneApp Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Optional Release: R1",
-            "AMC/AVCC Status:DEV",
-            "AppId:<AppID>",
+            "Package Name: <AppID>_VideoLAN_VLCMediaPlayer_<version>_PKG_R1",
+            "Package Type: Win32 PSADT",
+            "Deployment Engineer: IntuneApp Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Optional Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppId: <AppID>",
 			"FamilyID:FAM2074"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -41,7 +41,7 @@
     },
     "CustomRequirementRule": [
     ],
-"DetectionRule": [
+    "DetectionRule": [
         {
             "Type": "Registry",
             "DetectionMethod": "VersionComparison",
@@ -55,47 +55,12 @@
     "Assignment": [
    {
         "Type": "Group",
-        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
         "Groupdescription": "Test Groups for IAF AO testing",
-        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
         "GroupMode": "Include",
         "Intent": "Available",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
-    },
-    {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-VlcMediaPlayer",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "14033123-d297-4dcf-865e-a574e62f634f",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-    },
-    {
-        "Type": "IATGroup",
-        "GroupName": "WPS-QS-AAD-APPL-VlcMediaPlayer",
-        "Groupdescription": "QS group for VLC Media Player",
-        "GroupID": "d220caaa-abbd-4ee0-9ead-dc07028efd7c",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "AVC - All TEST Virtual PCs",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "AOTGroup",
-        "GroupName": "WPS-QS-AAD-APPL-VlcMediaPlayer",
-        "Groupdescription": "QS group for VLC Media Player",
-        "GroupID": "d220caaa-abbd-4ee0-9ead-dc07028efd7c",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
+        "Notification": "showAll"
     }
 ]
 }

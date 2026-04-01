@@ -25,7 +25,6 @@
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
             "Service_AVC"
         ]
     },
@@ -55,48 +54,13 @@
     ],
     "Assignment": [
         {
-             "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-             "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-             "GroupMode": "Include",
-             "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-         },
-        {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-Mozilla",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "049d0a2e-4038-4534-8bce-d0edcea68cca",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-Firefox",
-            "Groupdescription": "QS group for Mozilla Firefox",
-            "GroupID": "7a53426d-ad23-4d73-85d7-7b74c4bd50ab",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-Firefox",
-            "Groupdescription": "QS group for Mozilla Firefox",
-            "GroupID": "7a53426d-ad23-4d73-85d7-7b74c4bd50ab",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll"
         }
      ]
 }

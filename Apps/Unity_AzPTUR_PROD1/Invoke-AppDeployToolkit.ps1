@@ -174,11 +174,11 @@ function Install-ADTDeployment
     
     # Unity old version Removal
 
-    if(Test-Path "$envProgramFilesX86\Unity_$($UnityEnv)")
+    if(Test-Path "$envProgramFilesX86\$($UnityEnv)")
     {
         Write-ADTLogEntry -Message "Found previous Unity installation" 
         Try{
-            Remove-Item -Path "$envProgramFilesX86\Unity_$($UnityEnv)" -Recurse -Force
+            Remove-Item -Path "$envProgramFilesX86\$($UnityEnv)" -Recurse -Force
             Write-ADTLogEntry -Message "Removed previous version InstallDIR" 
         }catch{
             Write-ADTLogEntry -Message "Failed to remove previous version InstallDIR" 
@@ -528,12 +528,12 @@ catch
     # Show-ADTInstallationPrompt -Message "$($adtSession.DeploymentType) failed at line $($_.InvocationInfo.ScriptLineNumber), char $($_.InvocationInfo.OffsetInLine):`n$($_.InvocationInfo.Line.Trim())`n`nMessage:`n$($_.Exception.Message)" -MessageAlignment Left -ButtonRightText OK -Icon Error -NoWait
 
     Close-ADTSession -ExitCode 60001
-
+}
 # SIG # Begin signature block
 # MIIigQYJKoZIhvcNAQcCoIIicjCCIm4CAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCC/uMIooVPVl1dW
-# eyiXb8ZVieibLh4SR8vxJeBBthPpJqCCHK4wggQUMIIC/KADAgECAgQQAztrMA0G
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCB9o/mZIAvwjcsn
+# hhXs9eyR8qfDVTEM6cCLT9Lt0sr+26CCHK4wggQUMIIC/KADAgECAgQQAztrMA0G
 # CSqGSIb3DQEBCwUAMEUxCzAJBgNVBAYTAkRFMRAwDgYDVQQKDAdBbGxpYW56MSQw
 # IgYDVQQDDBtBbGxpYW56IEluZnJhc3RydWN0dXJlIENBIFYwHhcNMjUwMzEyMDcz
 # MjM0WhcNMjcwMzEyMDczMjM0WjA8MQswCQYDVQQGEwJERTEQMA4GA1UECgwHQWxs
@@ -690,29 +690,29 @@ catch
 # EwJERTEQMA4GA1UECgwHQWxsaWFuejEkMCIGA1UEAwwbQWxsaWFueiBJbmZyYXN0
 # cnVjdHVyZSBDQSBWAgQQAztrMA0GCWCGSAFlAwQCAQUAoIGEMBgGCisGAQQBgjcC
 # AQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQwHAYKKwYB
-# BAGCNwIBCzEOMAwGCisGAQQBgjcCARUwLwYJKoZIhvcNAQkEMSIEIEbYs4AwKHMf
-# 5EkvEpzxL80dNWLXtwcdpJc3DxHWauYoMA0GCSqGSIb3DQEBAQUABIIBACCzpuUF
-# HB3jyYab8gPLpP6v+gP28N0QXeyDgkZIX1cPKFjxyGgH0hIPfG++G90SolAgqUki
-# /NBy49L4fA3QucA3wveITkmJyBz+qyYyX9PCDk7260+EjTnwUcG3YJAtkoGji+ED
-# 9OkqJD1eyXWSGEjipOjus1JrpS2eng+FibjFzZD2kgkh4GFyqL9YO95EVMjXdrSR
-# GmdR4JGPM1HLq+XGtbhRHwHKHoKv6M4rFv2/9p5DviaiKYmUgGVUR0Ja8nqJsxPj
-# U0B5FlCZCLTdmKpldZ7HcHOvp7ec5jhVPDQrxxXOHGN3EgafVdSCuVgoy4/E9zjW
-# 2bONh1M9jp6WdbOhggMmMIIDIgYJKoZIhvcNAQkGMYIDEzCCAw8CAQEwfTBpMQsw
+# BAGCNwIBCzEOMAwGCisGAQQBgjcCARUwLwYJKoZIhvcNAQkEMSIEIIWJGSs69kHc
+# dR6g6h2BxkhsiLFo6Q4TJO7xfA4XL+FdMA0GCSqGSIb3DQEBAQUABIIBAJfHhj4m
+# BEE4d2w2/MU365ZpNHvDEcnoje5fAZQP3o6mF0pLCduHBvU5shnvfiSPU6RpKoVA
+# heYtg+JwRCZlB62zizOvWlg/x+HP2wxGvdbcdHICmlwCPvsHpqL8yKl1hGc34qxq
+# w/k96TVye9luZWHr6i9DAL/oKjpv+eZcL2SmSSoPUvmTSNAQIo2rv05PnrfeDK3E
+# pOrKsh43CmWxouPVBmCy6jLdn64TLF0RDAs01/zuwrO8+C5QrjGIJGPwpFwwuV8B
+# nx1WMlxacTaZ7zocAG25Knj3ARLYXKyuWnikXztcFgDrVt0gP4oY0+T8IlS7injw
+# PxwH5DjhDPOlE4KhggMmMIIDIgYJKoZIhvcNAQkGMYIDEzCCAw8CAQEwfTBpMQsw
 # CQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xQTA/BgNVBAMTOERp
 # Z2lDZXJ0IFRydXN0ZWQgRzQgVGltZVN0YW1waW5nIFJTQTQwOTYgU0hBMjU2IDIw
 # MjUgQ0ExAhAKgO8YS43xBYLRxHanlXRoMA0GCWCGSAFlAwQCAQUAoGkwGAYJKoZI
-# hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjYwMzI2MTQyNzQ3
-# WjAvBgkqhkiG9w0BCQQxIgQgAQkvQLY6WTCL4M+xYwqjtFJNJ+DsX/Z1CUV06ywH
-# rNYwDQYJKoZIhvcNAQEBBQAEggIASGRGTh/zszFQ2QxGxBA7M0F+BCIBQYdvepgV
-# GXu7tk8hhs6/E1oFo5T0pjBgRnkskacIGXN747oToZMSqwOlksHnukSeF/0VwBSA
-# wYLHh46TMYvGOgzSF32NdcP13LSWYaPATEf9Ki2Igd9eHYn58jicIb3mdJj3tema
-# m2FuA8WiwiApOjoSxErcMBZEET1uamaZ9c0ppN9GySZ1lo0DiffEKktCQ1XuqKtj
-# nYriJXKFOhKp+LeEneQwcfvQQZqQC3KDlWQouW8Rp7OCMyYy9ynufg475inDShmH
-# 2xE11/DgPlQkUqyNDvfIOF7u6JpbMho5iVDmAEwniN4wEVaKb9sIF71yPwWBbstL
-# eo0/dD3VRukhf5aMsOgsQu24qZZ6dV0jG2fu+UdeINpISxWlFfgGzXq8gXwxPcJK
-# ezzl1/XPofhq+XjY4OywdU/sF5VAoRc/luf3TtvKI9YuMy123Qqs90J9yRJxtUH5
-# oDankU7xQoW2Q3Ka2GQeD0MfrZHRz1W94zMGelVHOzQasuCUQA83i99G+jWQBoS0
-# zy7HQ0+Qzuu/wfDhElYSJeK7coF4xoKZn5qQZ0Ne1uBxMD71zaUla2NBWFaP/BtJ
-# fNHjL9tfkTDcTGlA0EDwrQeIUYvkd9eU6lWIDiurRZnN8JytGma/h6+3ZPIIhIBA
-# oB7wAWs=
+# hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjYwMzI1MTczNDU2
+# WjAvBgkqhkiG9w0BCQQxIgQgt8NY7dz0De1oFRf3lc9l5oDKSj4t6iqJ1URsYYom
+# MjYwDQYJKoZIhvcNAQEBBQAEggIAU4Ds5IIJpZDxzdoZi281avxc6OUTiHklsvMD
+# whwPx7rYC+Oz9kGurX4OWwqNqi7NmwsqsZUoKbDyP6LWkf9R7eJYqUFasyFoZyVZ
+# M3HZEhAwPNanfIIvG2uFnKkLxZnsuJKT8e7psdr1frp8j1znQFjqXLnpr5aIwW4B
+# 0EsAdtKrJ7Xovs9dIXmtEmP94Ko0se3fnkPR2PHdCnkbF+Duw8HMe10xMANlkwKQ
+# Wl6HjwEAdNUi6G3trzzvaeaM+nlKL8evo/hGjoYAlOVqfLJS5RPoHUp7spx4aiSU
+# dEekckZBjoN4ijPBjDMNSpwqKUnOBJh6524hgIjzX1TFcoU6sn4YNVSI7f2Opi8U
+# taVCtYOerukqwOsMpomgtrRmJpjxa76lGzoHK0HfFfpjQdYeN96z7BhDC1K2EVoT
+# PjFangwWLwogpd7SxiEx6Q7a0CBFkcsz5tLBIL6ifRINQxh6BReMY9xoIdbYOC3O
+# sgusa4SEiZKjNpX2f35hG7+apnlsD7MIghs6f7S7lK7B7FdIhNvr/oA0t0lPi/mu
+# dogtNCNCd5NmtdOzkzkh3204MnfhJMCfuC1ab7n+agFMVba+T+wF7dNXrACHRr4+
+# 2O434N5tt5Bd+ZUjG+e51gWA2+rL4XHMhUNhQV3DntplsBKoM3pgxLthM8vlsuQ3
+# cCM/ckA=
 # SIG # End signature block

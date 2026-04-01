@@ -21,11 +21,11 @@
             "Release:R1",
             "AMC/AVCC Status:DEV",
             "AppID:<AppID>",
-			"FamilyID:FAM1794"
+            "FamilyID:FAM1794"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -54,50 +54,14 @@
         }
     ],
     "Assignment": [
-        {
-            "Type": "Group",
-            "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-            "Groupdescription": "Test Groups for IAF AO testing",
-            "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-            "GroupMode": "Include",
-            "Intent": "Available",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-
-        },
-        {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-NotepadPlus",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "66fc79e0-2231-4316-af00-80f796817406",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-NotepadPlus",
-            "Groupdescription": "QS group for NotepadPlusPlus",
-            "GroupID": "c3762fce-2489-4289-8b1c-e225589cb55b",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-NotepadPlus",
-            "Groupdescription": "QS group for NotepadPlusPlus",
-            "GroupID": "c3762fce-2489-4289-8b1c-e225589cb55b",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-        }
-    ]
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll"
+    }
+]
 }

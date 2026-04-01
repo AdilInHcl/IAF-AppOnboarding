@@ -2,7 +2,7 @@
 	"Name": "Acrobat",
 	"Source": "https://www.adobe.com/",
 	"Get": {
-		"Uri": "https://github.developer.allianz.io/api/v3/repos/WorkplaceServices/IAF-Custom-FAM2271-Adobe-AcrobatPRO/releases/latest",
+		"Uri": "https://github.developer.allianz.io/api/v3/repos/intune-appfactory-Packages/Acrobat/releases/latest",
 		"MatchVersion": "(\\d+(\\.\\d+){1,4}).*",
 		"MatchFileTypes": "\\.exe$|\\.msi$|\\.zip$"
 	},

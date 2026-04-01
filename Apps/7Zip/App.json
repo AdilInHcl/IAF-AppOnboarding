@@ -13,19 +13,19 @@
         "Description": "7-Zip is a free and open-source file archiver, a utility used to place groups of files within compressed containers known as archives",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name:<AppID>_IgorPavlov_7-Zip_<Version>_PKG_R1",
-            "Package Type:Win 32 PSADT",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Optional",
-            "Release:R1",
-            "AMC/AVCC Status:DEV ",
-            "AppID:<AppID>",
+            "Package Name: <AppID>_IgorPavlov_7-Zip_<Version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Optional",
+            "Release: R1",
+            "AMC/AVCC Status: DEV ",
+            "AppID: <AppID>",
 			"FamilyID:FAM2023"
         ],
-        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com", 
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -53,48 +53,12 @@
     "Assignment": [
    {
         "Type": "Group",
-        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
         "Groupdescription": "Test Groups for IAF AO testing",
-        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",        
         "GroupMode": "Include",
         "Intent": "Available",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "Group",
-        "GroupName": "WPS-LE-DEVICE-APPL-WIN-7Zip",
-        "Groupdescription": "Test Groups for IAF LE Smoke testing",
-	    "GroupID": "e05e8132-536f-4674-bc98-cccef52c37fe",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "",
-        "FilterMode": ""
-    },
-    {
-        "Type": "IATGroup",
-        "GroupName": "WPS-QS-AAD-APPL-7zip",
-        "Groupdescription": "QS group for 7zip",
-        "GroupID": "18b1337c-0e29-464a-ba88-5ee6e04cbb2a",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "AVC - All TEST Virtual PCs",
-        "FilterMode": "include"
-    },
-    {
-        "Type": "AOTGroup",
-        "GroupName": "WPS-QS-AAD-APPL-7zip",
-        "Groupdescription": "QS group for 7zip",
-        "GroupID": "18b1337c-0e29-464a-ba88-5ee6e04cbb2a",
-        "GroupMode": "Include",
-        "Intent": "Required",
-        "Notification": "showAll",
-        "FilterName": "All-AMC and AVC-Dedicated",
-        "FilterMode": "include"
+        "Notification": "showAll"
     }
-    
 ]
 }

@@ -2,7 +2,7 @@
 	"Name": "CreativeCloud",
 	"Source": "https://www.adobe.com",
 	"Get": {
-		"Uri": "https://github.developer.allianz.io/api/v3/repos/WorkplaceServices/IAF-Custom-FAM954-Adobe-CreativeCloud/releases/latest",
+		"Uri": "https://github.developer.allianz.io/api/v3/repos/intune-appfactory-Packages/CreativeCloud/releases/latest",
 		"MatchVersion": "(\\d+(\\.\\d+){1,4}).*",
 		"MatchFileTypes": "\\.exe$|\\.msi$|\\.zip$"
 	},

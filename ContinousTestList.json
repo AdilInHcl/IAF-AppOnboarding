@@ -1,0 +1,15 @@
+{
+  "Apps": [
+    {
+      "IntuneAppName": "wireshark",
+      "NotifiedLETeam": "Yes",
+      "AddedOn": "Date"
+
+    },
+    {
+      "IntuneAppName": "ViceVersaPro",
+      "NotifiedLETeam": "Yes",
+      "AddedOn": "Date"
+    }
+  ]
+}

@@ -13,19 +13,19 @@
         "Description": "Harmon.ie is used to drag and drop mails/documents to SPO sites from Outlook",
         "Publisher": "<replaced_by_pipeline>",
         "Notes": [
-            "Package Name:IAF_HarmonIE_HarmonIE365_<version>_PKG_R1",
-            "Package Type:Win 32 PSADT",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Optional",
-            "Release:R1",
-            "AMC/AVCC Status:DEV",
-            "AppID:<AppID>",
-			"FamilyID:FAM2999"
+            "Package Name: IAF_HarmonIE_HarmonIE365_<version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Optional",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
+			"FamilyID: FAM2999"
         ],
-        "Owner": "akhil.ramesan-sheela@allianz.com;tony.thomas-k@allianz.com;APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "Owner": "akhil.ramesan-sheela@allianz.com;tony.thomas-k@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -52,37 +52,13 @@
     ],
     "Assignment": [
         {
-             "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-             "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-             "GroupMode": "Include",
-             "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-HARMONIE64BIT",
-            "Groupdescription": "QS group for HarmonIE",
-            "GroupID": "4e07825f-b94b-4835-9fc3-e6fcfa9f4bba",
+            "Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+            "Groupdescription": "Test Groups for IAF AO testing",
+            "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
             "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-HARMONIE64BIT",
-            "Groupdescription": "QS group for HarmonIE",
-            "GroupID": "4e07825f-b94b-4835-9fc3-e6fcfa9f4bba",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
+            "Intent": "Available",
+            "Notification": "showAll"
         }
     ]
 }

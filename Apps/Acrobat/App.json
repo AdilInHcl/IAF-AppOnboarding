@@ -12,20 +12,20 @@
         "AppVersion": "<replaced_by_pipeline>",
         "Description": "Application for viewing/editing PDF documents",
         "Publisher": "<replaced_by_pipeline>",
-       "Notes": [
-            "Package Name:<AppID>_Adobe_Acrobat_<Version>_PKG_R1",
-            "Package Type:Win 32 PSADT",
-            "Deployment Engineer:Intune App Factory",
-            "Deployment Date:<Date>",
-            "Deployment Method:Global",
-            "Release:R1",
-            "AMC/AVCC Status:DEV",
-            "AppID:<AppID>",
+        "Notes": [
+            "Package Name: <AppID>_Adobe_Acrobat_<Version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Global",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
 			"FamilyID:FAM2271"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -56,47 +56,12 @@
     "Assignment": [
         {
              "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+             "GroupName": "WPS-QS-AAD-APPL-IATTest1",
              "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+             "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
              "GroupMode": "Include",
              "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-         },
-         {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-AcrobatPro",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "f1eb1e45-ae7f-4390-b84d-2707905798ee",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
-        },
-        {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-AAD-APPL-AcrobatProDC",
-            "Groupdescription": "QS Group for Adobe Acrobat Pro DC",
-            "GroupID": "836cab67-5ee1-4051-80d0-6f53b63ec6f0",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-        {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-AAD-APPL-AcrobatProDC",
-            "Groupdescription": "Test Groups for IAF Apps AO testing",
-            "GroupID": "836cab67-5ee1-4051-80d0-6f53b63ec6f0",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-        }
+             "Notification": "showAll"
+         }
      ]
 }

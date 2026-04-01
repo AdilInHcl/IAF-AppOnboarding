@@ -1,0 +1,30 @@
+{
+  "Apps": [
+    {
+      "IntuneAppName": "ViceVersaProTest",
+      "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+      "AppPublisher": "TGRMN",
+      "AppSource": "Winget",
+      "AppID": "TGRMNSoftware.ViceVersaPro",
+      "AppFolderName": "ViceVersaPro",
+      "AppPath": [
+        {
+          "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\ViceVersa Pro.lnk",
+          "ProcessName": "ViceVersa.exe"
+        },
+        {
+          "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\VVEngine Scheduler (Web Page).lnk",
+          "ProcessName": "msedge.exe"
+        },
+        {
+          "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\Tools\\VVLauncher.lnk",
+          "ProcessName": "VVLauncher.exe"
+        },
+        {
+          "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ViceVersa Pro\\Tools\\VVScheduler.lnk",
+          "ProcessName": "VVScheduler.exe"
+        }
+      ]
+    }
+  ]
+}

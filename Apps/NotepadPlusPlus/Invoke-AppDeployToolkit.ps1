@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2026-2-11'     # Do not modify the DATE here, it should be 2026-2-11
+    DeployAppScriptDate = '2026-02-11'
 }
 
 function Install-ADTDeployment
@@ -146,6 +146,7 @@ function Install-ADTDeployment
         $Defertime = 900
         $DeferCount = 1
     }
+ 
     $saiwParams = @{
         AllowDefer = $true
         DeferTimes = $DeferCount
@@ -332,27 +333,6 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.
-    <#if($Nodefer){
-      $Defertime = 900
-      $DeferCount = 0  
-     
-    }else{
-        $Defertime = 900
-        $DeferCount = 1
-    }
-    $saiwParams = @{
-        AllowDefer = $true
-        DeferTimes = $DeferCount
-        CheckDiskSpace = $true
-        PersistPrompt = $true
-        ForceCountdown = $Defertime
-    }
-    if ($adtSession.AppProcessesToClose.Count -gt 0)
-    {
-        $saiwParams.Add('CloseProcesses', $adtSession.AppProcessesToClose)
- 
-        Show-ADTInstallationWelcome @saiwParams
-    }#>
 
     Show-ADTInstallationWelcome -CloseProcesses @{Name ="Notepad++"} -Silent
 

@@ -13,28 +13,25 @@ foreach ($Path in $RegistryPaths) {
 
 
 If($null -eq $InstalledSoftwares){
-    write-output "no version installed , Proceeding with installation"
+    Write-Host "no version installed , Proceeding with installation"
     Exit 1
 }
 
 If($InstalledSoftwares.Count -gt 1){
 
     foreach ($app in $InstalledSoftwares){
-        If ([version]$app.DisplayVersion -ge [version]$IAFVersion1){}
+        If ([version]$app.DisplayVersion -eq [version]$IAFVersion1){}
         else{            
             $msg1 = "version found in device - " + $app.DisplayVersion
-            write-output "$($msg1) , Proceeding with installation"
+            Write-Host "$($msg1) , Proceeding with installation"
             Exit 1
            }
     }
 }else{
-    If (([version]$InstalledSoftwares.DisplayVersion -ge [version]$IAFVersion1)){
-        write-output "Installed"
-        Exit 0
-    }
+    If (([version]$InstalledSoftwares.DisplayVersion -eq [version]$IAFVersion1)){}
     else{            
             $msg2 = "version found in device - " + $InstalledSoftwares.DisplayVersion
-            write-output "$($msg2), Proceeding with installation"
+            Write-Host "$($msg2), Proceeding with installation"
             Exit 1
        }
 }

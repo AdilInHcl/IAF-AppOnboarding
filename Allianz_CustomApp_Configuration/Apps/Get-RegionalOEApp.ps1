@@ -1,7 +1,7 @@
 Function Get-RegionalOEApp {
     <#
         .SYNOPSIS
-            Get the current version and download URL for Regional OE.
+            Get the current version and download URL for Crowdstrike.
 
         .NOTES
             Site:

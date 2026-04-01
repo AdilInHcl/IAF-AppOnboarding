@@ -25,7 +25,7 @@
         ],
         "Owner": "extern.nikumbh_kaustubh@allianz.de;extern.sipahi_bulent@allianz.de",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -55,37 +55,13 @@
     ],
     "Assignment": [
 		{
-             "Type": "Group",
-             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-             "Groupdescription": "Test Groups for IAF AO testing",
-             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-             "GroupMode": "Include",
-             "Intent": "Available",
-             "Notification": "showAll",
-             "FilterName": "All-AMC and AVC-Dedicated",
-             "FilterMode": "include"
-         },
-         {
-            "Type": "IATGroup",
-            "GroupName": "WPS-QS-USER-APPL-WIN-UNITYAZP-TURPROD1",
-            "Groupdescription": "QS group for Unity AzP Turkey PROD1",
-            "GroupID": "7b1433de-390a-4ab7-85d3-76d2e38e4b29",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-        },
-         {
-            "Type": "AOTGroup",
-            "GroupName": "WPS-QS-USER-APPL-WIN-UNITYAZP-TURPROD1",
-            "Groupdescription": "QS group for Unity AzP Turkey PROD1",
-            "GroupID": "7b1433de-390a-4ab7-85d3-76d2e38e4b29",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "All-AMC and AVC-Dedicated",
-            "FilterMode": "include"
-         }
+			"Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+            "Groupdescription": "Test Groups for IAF AO testing",
+			"GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+			"GroupMode": "Include",
+			"Intent": "Available",
+			"Notification": "showAll"
+		}
 	]
 }

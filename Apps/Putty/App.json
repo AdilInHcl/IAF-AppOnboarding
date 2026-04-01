@@ -13,19 +13,19 @@
         "Description": "PuTTY is a client program for the SSH, Telnet, Rlogin, and SUPDUP network protocols. These protocols are all used to run a remote session on a computer, over a network.",
         "Publisher": "<replaced_by_pipeline>",
 		"Notes": [
-            "Package Name: <AppID>_SimonTatham_Putty_<Version>_PKG_R1",
-            "Package Type: Win 32 PSADT",
-            "Deployment Engineer: Intune App Factory",
-            "Deployment Date: <Date>",
-            "Deployment Method: Global",
-            "Release: R1",
-            "AMC/AVCC Status: DEV",
-            "AppID: <AppID>",
+            "Package Name:<AppID>_SimonTatham_Putty_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Global",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
 			"FamilyID:FAM1772"
         ],
         "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
         "ScopeTagName":  [
-            "AMC",
+            "Service_AMC",
             "Service_AVC"
         ]
     },
@@ -50,28 +50,15 @@
             "ProductVersion": "<replaced_by_pipeline>"
         }
     ],
-    "Assignment": [
-        {
-            "Type": "Group",
-            "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
-            "Groupdescription": "Test Groups for IAF AO testing",
-            "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "AVC - All TEST Virtual PCs",
-            "FilterMode": "include"
-         },
-         {
-            "Type": "Group",
-            "GroupName": "WPS-LE-DEVICE-APPL-WIN-Putty",
-            "Groupdescription": "Test Groups for IAF LE Smoke testing",
-            "GroupID": "1736eac4-7d4a-4459-9d87-172dae7cf957",
-            "GroupMode": "Include",
-            "Intent": "Required",
-            "Notification": "showAll",
-            "FilterName": "",
-            "FilterMode": ""
+     "Assignment": [
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IATTest1",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "f30fca68-4fe7-4d7f-909a-438399ea3598",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll"
     }
-     ]
+]
 }

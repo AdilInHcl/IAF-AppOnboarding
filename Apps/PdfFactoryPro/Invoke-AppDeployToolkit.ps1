@@ -1,4 +1,4 @@
-﻿<#
+<#
 
 .SYNOPSIS
 PSAppDeployToolkit - This script performs the installation or uninstallation of an application(s).
@@ -122,7 +122,7 @@ $adtSession = @{
     DeployAppScriptFriendlyName = $MyInvocation.MyCommand.Name
     DeployAppScriptParameters = $PSBoundParameters
     DeployAppScriptVersion = '4.1.5'
-    DeployAppScriptDate = '2026-2-11'     # Do not modify the DATE here, it should be 2026-2-11
+    DeployAppScriptDate = '2026-02-11'
 }
 
 function Install-ADTDeployment
@@ -138,7 +138,7 @@ function Install-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## Show Welcome Message, close processes if specified, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt.
-    if($Nodefer){
+      if($Nodefer){
       $Defertime = 900
       $DeferCount = 0  
      
@@ -146,6 +146,7 @@ function Install-ADTDeployment
         $Defertime = 900
         $DeferCount = 1
     }
+ 
     $saiwParams = @{
         AllowDefer = $true
         DeferTimes = $DeferCount
@@ -159,7 +160,6 @@ function Install-ADTDeployment
  
         Show-ADTInstallationWelcome @saiwParams
     }
-
     ## <Perform Pre-Installation tasks here>
 
     Uninstall-ADTApplication -Name "pdfFactory Pro" -ApplicationType 'EXE' -ArgumentList "/uninstall /silent"
@@ -271,7 +271,7 @@ function Uninstall-ADTDeployment
     $adtSession.InstallPhase = "Pre-$($adtSession.DeploymentType)"
 
     ## If there are processes to close, show Welcome Message with a 10 minutes countdown before automatically closing.
-    <#if($Nodefer){
+    if($NoDefer){
       $Defertime = 900
       $DeferCount = 0  
      
@@ -279,19 +279,10 @@ function Uninstall-ADTDeployment
         $Defertime = 900
         $DeferCount = 1
     }
-    $saiwParams = @{
-        AllowDefer = $true
-        DeferTimes = $DeferCount
-        CheckDiskSpace = $true
-        PersistPrompt = $true
-        ForceCountdown = $Defertime
-    }
     if ($adtSession.AppProcessesToClose.Count -gt 0)
     {
-        $saiwParams.Add('CloseProcesses', $adtSession.AppProcessesToClose)
- 
-        Show-ADTInstallationWelcome @saiwParams
-    }#>
+        Show-ADTInstallationWelcome -CloseProcesses $adtSession.AppProcessesToClose -AllowDefer -DeferTimes $DeferCount -ForceCountdown $DeferTime
+    }
 
     ## <Perform Pre-Uninstallation tasks here>
 

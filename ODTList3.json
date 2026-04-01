@@ -1,0 +1,29 @@
+{
+  "Apps": [
+    {
+            "IntuneAppName": "Acrobat Reader DC",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Adobe",
+            "AppSource": "Evergreen",
+            "AppID": "AdobeAcrobat",
+            "AppConfigFiles": "Yes",
+            "AppFolderName": "AdobeReader",
+            "FilterOptions": [
+                {
+                    "Type": "Update",
+                    "Architecture": "x86",
+                    "Track": "DC",
+                    "Product":"Reader",
+                    "Language": "Multi"
+
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath":  "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Acrobat Reader.lnk",
+                    "ProcessName":  "AcroRd32.exe"
+                }     
+            ]
+    }
+  ]
+}
