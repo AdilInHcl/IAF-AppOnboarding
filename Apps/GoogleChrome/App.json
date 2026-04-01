@@ -1,0 +1,102 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Google Chrome is a internet browser.",
+        "Publisher": "<replaced_by_pipeline>",
+		"Notes": [
+            "Package Name:<AppID>_GoogleLLC_GoogleChrome_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Global",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM2076"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "File",
+            "DetectionMethod": "Version",
+            "Path": "C:\\Program Files\\Google\\Chrome\\Application",
+            "FileOrFolder": "chrome.exe",
+            "Operator": "greaterThanOrEqual",
+            "VersionValue": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }
+    ],
+    "Assignment": [
+        {
+            "Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+            "Groupdescription": "Test Groups for IAF AO testing",
+            "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+            "GroupMode": "Include",
+            "Intent": "Available",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-GoogleChrome",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "bbed65dc-6e4d-41a0-9eca-43b753ce6e97",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+        },
+        {
+            "Type": "IATGroup",
+            "GroupName": "WPS-P-AAD-APPL-GoogleChrome",
+            "Groupdescription": "QS group for Google Chrome",
+            "GroupID": "6a9726c5-96aa-4948-95da-256c21fee26c",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-P-AAD-APPL-GoogleChrome",
+            "Groupdescription": "QS group for Google Chrome",
+            "GroupID": "6a9726c5-96aa-4948-95da-256c21fee26c",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        }
+    ]
+}

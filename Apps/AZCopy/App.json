@@ -1,0 +1,102 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account. This article helps you download AzCopy, connect to your storage account, and then transfer files.",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_Microsoft_AzureCopy_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Optional",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM2125"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\AZCopy",
+            "ValueName": "DisplayVersion",
+            "Operator": "Equal",
+            "Value": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }
+    ],
+    "Assignment": [
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll",
+        "FilterName": "All-AMC and AVC-Dedicated",
+        "FilterMode": "include"
+    },
+    {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-AzureCopy",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "e8802865-c10b-444c-8e83-2c394e004ced",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+    },
+    {
+        "Type": "IATGroup",
+        "GroupName": "WPS-QS-AAD-APPL-AzureCopy",
+        "Groupdescription": "QS Group for Azure Copy",
+        "GroupID": "f919510b-f221-4c20-8b2c-17d9690fb4d6",
+        "GroupMode": "Include",
+        "Intent": "Required",
+        "Notification": "showAll",
+        "FilterName": "AVC - All TEST Virtual PCs",
+        "FilterMode": "include"
+    },
+    {
+        "Type": "AOTGroup",
+        "GroupName": "WPS-QS-AAD-APPL-AzureCopy",
+        "Groupdescription": "QS Group for Azure Copy",
+        "GroupID": "f919510b-f221-4c20-8b2c-17d9690fb4d6",
+        "GroupMode": "Include",
+        "Intent": "Required",
+        "Notification": "showAll",
+        "FilterName": "All-AMC and AVC-Dedicated",
+        "FilterMode": "include"
+    }
+]
+}

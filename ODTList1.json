@@ -1,0 +1,24 @@
+{
+    "Apps": [        
+        {
+            "IntuneAppName": "AzureCLI",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Evergreen",
+            "AppID": "MicrosoftAzureCLI",
+            "AppFolderName": "AzureCLI",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Type": "msi"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "NAghfhf",
+                    "ProcessName": "NA"
+                }     
+            ]           
+        }  
+    ]
+}

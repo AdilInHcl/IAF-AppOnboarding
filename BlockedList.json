@@ -1,0 +1,14 @@
+{
+    "Apps": [
+            {
+                "IntuneAppName":  "Peazip",
+                "AppPublisher":  "Giorgiotani",
+                "AppSetupVersion":  ""
+            },
+            {
+                "IntuneAppName":  "Peazip",
+                "AppPublisher":  "Giorgiotani",
+                "AppSetupVersion":  ""
+            }
+        ]
+}

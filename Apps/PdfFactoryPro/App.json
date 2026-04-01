@@ -1,0 +1,103 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "pdfFactory pro is a tool for creating PDF files. It allows you to instantly create PDFs with a few clicks. Users can also combine multiple documents into one PDF. The software features the ability to preview your conversion and allows you to encrypt the PDF files as well. It allows you to create PDFs on letterhead. Users can also add page numbering, headers, footers, watermarks. Bookmarks and Table of Contents can also be added.",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_FinePrint_PdfFactoryPro_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date<Date>",
+            "Deployment Method: Optional",
+            "ReleaseR1",
+            "AMC/AVCC Status: DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM778"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\pdfFactory Pro",
+            "ValueName": "DisplayVersion",
+            "Operator": "Equal",
+            "Value": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }
+    ],
+    "Assignment": [
+        {
+            "Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+            "Groupdescription": "Test Groups for IAF AO testing",
+            "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+            "GroupMode": "Include",
+            "Intent": "Available",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+
+        },
+        {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-PDFFactoryPro",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "af432100-87c6-44e2-936b-a2f3a306af28",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+        },
+        {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-AAD-APPL-PdfFactoryPro",
+            "Groupdescription": "QS group for Pdf Factory Pro",
+            "GroupID": "5456d1ad-9f66-4db8-a308-63306c0a7293",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-AAD-APPL-PdfFactoryPro",
+            "Groupdescription": "QS group for Pdf Factory Pro",
+            "GroupID": "5456d1ad-9f66-4db8-a308-63306c0a7293",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        }
+    ]
+}

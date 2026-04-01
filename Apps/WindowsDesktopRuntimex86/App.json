@@ -1,0 +1,88 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Runtime which supports Citrix Workspace App",
+        "Publisher": "<replaced_by_pipeline>",
+		"Notes": [
+            "Package Name:<AppID>_Microsoft_WindowsDesktopRuntimex86_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Global",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM2840"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Script",
+            "ScriptFile": "detection.ps1",
+            "EnforceSignatureCheck": "false",
+            "RunAs32Bit": "false"
+        }
+    ],
+    "Assignment": [
+   {
+             "Type": "Group",
+             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+             "Groupdescription": "Test Groups for IAF AO testing",
+             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+             "GroupMode": "Include",
+             "Intent": "Available",
+             "Notification": "showAll",
+             "FilterName": "All-AMC and AVC-Dedicated",
+             "FilterMode": "include"
+    },
+    {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-AAD-APPL-DOTNETDESKTOPRUNTIME",
+            "Groupdescription": "QS group for Windows Desktop Runtime x86",
+            "GroupID": "43ab7e36-bbd0-4f89-a047-32b93249c69d",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+    },
+    {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-AAD-APPL-DOTNETDESKTOPRUNTIME",
+            "Groupdescription": "QS group for Windows Desktop Runtime x86",
+            "GroupID": "43ab7e36-bbd0-4f89-a047-32b93249c69d",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+    }
+]
+}

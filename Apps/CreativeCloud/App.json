@@ -1,0 +1,103 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Adobe Creative Cloud is a set of applications and services from Adobe Inc. that gives subscribers access to a collection of software used for graphic design, video editing, web development, photography, along with a set of mobile applications and also some optional cloud services. Recommended device specifications are provided below. Operating System: Windows 11 versions 23H2, 22H2, 21H2 (LTSB branches aren't supported). Processor: Intel® 11th Gen or newer CPU with Quick Sync – or AMD Ryzen™ 3000 Series / Threadripper 2000 series or newer CPU Memory: 16 GB of RAM for HD media, 32 GB or more for 4K and higher GPU: 4 GB of GPU memory for HD and some 4K media, 6 GB or more for 4K and higher Storage: Fast internal SSD for app installation and cache; Additional high-speed drive(s) for media Display: 1920 x 1080 or greater; DisplayHDR 1000 for HDR workflows Sound card: ASIO compatible or Microsoft Windows Driver Model",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_Adobe_CreativeCloud_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Optional",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM954"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Adobe Creative Cloud",
+            "ValueName": "DisplayVersion",
+            "Operator": "greaterThanOrEqual",
+            "Value": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }
+    ],
+    "Assignment": [
+        {
+             "Type": "Group",
+             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+             "Groupdescription": "Test Groups for IAF AO testing",
+             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+             "GroupMode": "Include",
+             "Intent": "Available",
+             "Notification": "showAll",
+             "FilterName": "All-AMC and AVC-Dedicated",
+             "FilterMode": "include"
+
+         },
+         {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-AdobeCreativeCloud",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "7ec29017-ce01-4bd7-bdf3-11a15144efb5",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+        },
+        {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-AAD-APPL-Adobe CreativeCloud",
+            "Groupdescription": "QS group for Creative Cloud",
+            "GroupID": "f843845b-7736-4858-a53a-412141f35d04",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-AAD-APPL-Adobe CreativeCloud",
+            "Groupdescription": "QS group for Creative Cloud",
+            "GroupID": "f843845b-7736-4858-a53a-412141f35d04",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Mozilla Firefox is a internet browser.",
+        "Publisher": "<replaced_by_pipeline>",
+		"Notes": [
+            "Package Name:<AppID>_Mozilla_Firefox_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Global",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM2121"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "File",
+            "DetectionMethod": "Version",
+            "Path": "C:\\Program Files\\Mozilla Firefox",
+            "FileOrFolder": "firefox.exe",
+            "Operator": "greaterThanOrEqual",
+            "VersionValue": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }
+    ],
+    "Assignment": [
+        {
+             "Type": "Group",
+             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+             "Groupdescription": "Test Groups for IAF AO testing",
+             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+             "GroupMode": "Include",
+             "Intent": "Available",
+             "Notification": "showAll",
+             "FilterName": "All-AMC and AVC-Dedicated",
+             "FilterMode": "include"
+         },
+        {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-Mozilla",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "049d0a2e-4038-4534-8bce-d0edcea68cca",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+        },
+        {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-AAD-APPL-Firefox",
+            "Groupdescription": "QS group for Mozilla Firefox",
+            "GroupID": "7a53426d-ad23-4d73-85d7-7b74c4bd50ab",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-AAD-APPL-Firefox",
+            "Groupdescription": "QS group for Mozilla Firefox",
+            "GroupID": "7a53426d-ad23-4d73-85d7-7b74c4bd50ab",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        }
+     ]
+}

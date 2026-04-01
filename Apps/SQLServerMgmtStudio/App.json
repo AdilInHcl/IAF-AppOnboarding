@@ -1,0 +1,104 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Microsoft SQL Server Management Studio (SSMS) 21 is a powerful, integrated environment for managing SQL Server and Azure SQL databases. It provides a comprehensive set of tools for database administration, development, and business intelligence.",
+        "Publisher": "<replaced_by_pipeline>",
+		"Notes": [
+            "Package Name:<AppID>_Microsoft_SQLServerMgmtStudio_<Version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Global",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM2197"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\AllianzPackages\\Microsoft_SQLServerMgmtStudio_PKG",
+            "ValueName": "Version",
+            "Operator": "Equal",
+            "Value": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }
+    ],
+    "Assignment": [
+        {
+             "Type": "Group",
+             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+             "Groupdescription": "Test Groups for IAF AO testing",
+             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+             "GroupMode": "Include",
+             "Intent": "Available",
+             "Notification": "showAll",
+             "FilterName": "All-AMC and AVC-Dedicated",
+             "FilterMode": "include"
+         },
+         {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-SQLServerManagementStudio",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "809cb863-5096-4e08-8e5f-75f21abcec08",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+        },
+        {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-AAD-APPL-MSSQLSERVERMANAGEMENTSTUDIO19",
+            "Groupdescription": "QS group for Microsoft SQL Server Management Studio",
+            "GroupID": "5d32614f-464d-48b4-b803-e75af8cf62f8",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-AAD-APPL-MSSQLSERVERMANAGEMENTSTUDIO19",
+            "Groupdescription": "QS group for Microsoft SQL Server Management Studio",
+            "GroupID": "5d32614f-464d-48b4-b803-e75af8cf62f8",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        }
+
+        
+     ]
+}

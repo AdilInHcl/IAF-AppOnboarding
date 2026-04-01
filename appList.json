@@ -1,0 +1,458 @@
+{
+    "Apps": [	    
+	    {
+            "IntuneAppName": "7-Zip",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Igor Pavlov",
+            "AppSource": "Evergreen",
+            "AppID": "7zip",
+            "AppFolderName": "7zip",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Type": "msi"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\7-Zip\\7-Zip File Manager.lnk",
+                    "ProcessName": "7zFM.exe"
+                }     
+            ]            
+        },
+	    {
+            "IntuneAppName": "AzureCLI",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Evergreen",
+            "AppID": "MicrosoftAzureCLI",
+            "AppFolderName": "AzureCLI",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Type": "msi"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "NA",
+                    "ProcessName": "NA"
+                }     
+            ]           
+        },
+        {
+            "IntuneAppName": "CreativeCloud",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Adobe",
+            "AppSource": "Evergreen",
+            "AppID": "CreativeCloud",
+            "AppFolderName": "CreativeCloud",
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Adobe Creative Cloud.lnk",
+                    "ProcessName": "Creative Cloud.exe"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "Workspace",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Citrix",
+            "AppSource": "Winget",
+            "AppID": "Citrix.Workspace",
+            "AppFolderName": "CitrixWorkspace",
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Citrix Workspace\\Citrix Workspace.lnk",
+                    "ProcessName": "SelfService.exe"
+                }     
+            ]			
+        },
+        {
+            "IntuneAppName": "Acrobat Pro DC",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Adobe",
+            "AppSource": "Evergreen",
+            "AppID": "Acrobat",
+            "AppFolderName": "Acrobat",
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Adobe Acrobat.lnk",
+                    "ProcessName": "Acrobat.exe"
+                },
+                {
+                    "ShortcutPath": "NA",
+                    "ProcessName": "adobe_licensing_wf_acro.exe"
+                },
+                {
+                    "ShortcutPath": "NA",
+                    "ProcessName": "adobe_licensing_wf_helper_acro.exe"
+                }  
+            ]
+        },    
+        {
+            "IntuneAppName": "WinSCP",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Martin Prikryl",
+            "AppSource": "Evergreen",
+            "AppID": "WinSCP",
+            "AppFolderName": "WinSCP",
+            "FilterOptions": [
+                {
+                    "Architecture": "x86",
+                    "Type": "msi"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\WinSCP.lnk",
+                    "ProcessName": "WinSCP.exe"
+                }     
+            ]           
+        },
+        {
+            "IntuneAppName": "Putty",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "SimonTatham",
+            "AppSource": "Evergreen",
+            "AppID": "Putty",
+            "AppFolderName": "Putty",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Type": "msi"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PuTTY (64-bit)\\Pageant.lnk",
+                    "ProcessName": "pageant.exe"
+                },
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PuTTY (64-bit)\\PSFTP.lnk",
+                    "ProcessName": "psftp.exe"
+                },              
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PuTTY (64-bit)\\PuTTY.lnk",
+                    "ProcessName": "putty.exe"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PuTTY (64-bit)\\PuTTYgen.lnk",
+                    "ProcessName": "puttygen.exe"
+                }
+            ]            
+        },
+        {
+            "IntuneAppName": "SQLServerMgmtStudio",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Winget",
+            "AppID": "Microsoft.SQLServerManagementStudio.22",
+            "AppFolderName": "SQLServerMgmtStudio",
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft SQL Server Tools 20\\Analysis Services Deployment Wizard 20.lnk",
+                    "ProcessName": "Microsoft.AnalysisServices.Deployment.exe"
+                },
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft SQL Server Tools 20\\SQL Server Management Studio 20.lnk",
+                    "ProcessName": "Ssms.exe"
+                },
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft SQL Server Tools 20\\Performance Tools\\Database Engine Tuning Advisor 20.lnk",
+                    "ProcessName": "DTASHELL.EXE"
+                },
+                {
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft SQL Server Tools 20\\Performance Tools\\SQL Server Profiler 20.lnk",
+                    "ProcessName": "PROFILER.EXE"
+                }
+            ]
+        },
+        {
+            "IntuneAppName": "VisualStudioCode",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Evergreen",
+            "AppID": "MicrosoftVisualStudioCode",
+            "AppFolderName": "VisualStudioCode",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Channel": "Stable",
+                    "Platform": "win32-x64"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
+                    "ProcessName": "Code.exe"
+                }     
+            ]            
+        },
+        {
+            "IntuneAppName": "JabraDirect",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "GNAudio",
+            "AppSource": "Evergreen",
+            "AppID": "JabraDirect",
+            "AppFolderName": "JabraDirect",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Type": "exe"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Jabra\\Jabra Direct.lnk",
+                    "ProcessName": "jabra-direct.exe"
+                }     
+            ]            
+        },
+        {
+            "IntuneAppName": "GoogleChrome",
+            "IntuneAppNamingConvention": "AppNameAppVersion",
+            "AppPublisher": "Google",
+            "AppSource": "Winget",
+            "AppID": "Google.Chrome",
+            "AppFolderName": "GoogleChrome",
+			"AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Google Chrome.lnk",
+                    "ProcessName": "Chrome.exe"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "PdfFactoryPro",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Fineprint",
+            "AppSource": "Evergreen",
+            "AppID": "PdfFactoryPro",
+            "AppFolderName": "PdfFactoryPro",
+			"AppPath": [			
+				{
+                    "ShortcutPath": "NA",
+                    "ProcessName": "NA"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "Firefox",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Mozilla",
+            "AppSource": "Evergreen",
+            "AppID": "MozillaFirefox",
+            "AppFolderName": "MozillaFirefox",
+			"FilterOptions": [
+                {
+                    "Type": "exe",
+                    "Architecture": "x64",
+                    "Channel": "Extended Support",
+                    "Language": "en-US"
+
+                }
+            ],
+			"AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Mozilla Firefox\\Firefox Private Browsing.lnk",
+                    "ProcessName": "WindowsTime"
+                },
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Mozilla Firefox\\Firefox.lnk",
+                    "ProcessName": "WindowsTime2"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "Acrobat Reader DC",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Adobe",
+            "AppSource": "Evergreen",
+            "AppID": "AdobeReader",
+            "AppFolderName": "AdobeReader",
+            "AppPath": [			
+				{
+                    "ShortcutPath":  "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Acrobat Reader.lnk",
+                    "ProcessName":  "AcroRd32.exe"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "AzureCopy",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Winget",
+            "AppID": "Microsoft.Azure.AZCopy.10",
+            "AppFolderName": "AZCopy",
+            "AppPath": [			
+				{
+                    "ShortcutPath": "NA",
+                    "ProcessName": "NA"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "Konnekt",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Glueckkanja",
+            "AppSource": "Winget",
+            "AppID": "glueckkanja.KONNEKT",
+            "AppFolderName": "Konnekt",
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Konnekt.lnk",
+                    "ProcessName": "Konnekt.exe"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "Notepad++",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Don Ho",
+            "AppSource": "Evergreen",
+            "AppID": "NotepadPlusPlus",
+            "AppFolderName": "NotepadPlusPlus",
+            "FilterOptions": [
+                {
+                    "Architecture": "x64",
+                    "Type": "exe"
+                }
+            ],
+            "AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Notepad++.lnk",
+                    "ProcessName": "notepad++.exe"
+                }     
+            ]            
+        },
+        {
+            "IntuneAppName": "VLC",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "VideoLAN",
+            "AppSource": "Winget",
+            "AppID": "VideoLAN.VLC",
+            "AppFolderName": "VLC",
+			"AppPath": [			
+				{
+                    "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\VideoLAN\\VLC\\VLC media player.lnk",
+                    "ProcessName": "vlc.exe"
+                }     
+            ]
+        },
+        {
+            "IntuneAppName": "Teams",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Evergreen",
+            "AppID": "MicrosoftTeams",
+            "AppFolderName": "MicrosoftTeams",
+            "FilterOptions": [
+                {                    
+                    "Release": "Enterprise",
+					"Architecture": "x64",
+					"Type": "msix"	
+                }
+            ],
+            "AppPath": [
+                {
+                    "ShortcutPath": "NA",
+                    "ProcessName": "NA"
+                }
+            ]
+        },
+        {
+            "IntuneAppName": "wireshark",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Wireshark",
+            "AppSource": "Evergreen",
+            "AppID": "wireshark",
+            "AppFolderName": "Wireshark",
+            "FilterOptions": [
+                    {
+                    "Type": "msi",
+                    "Architecture": "x64",
+                    "Release": "Stable",
+                    "Version": "4.6.3"
+                    }
+                ],
+            "AppPath": [
+                {
+                "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Wireshark.lnk",
+                "ProcessName": "Wireshark.exe"
+                }
+            ]
+        },
+        {
+            "IntuneAppName": "HarmonIE 365",
+            "IntuneAppNamingConvention": "AppNameAppVersion",
+            "AppPublisher": "HarmonIE",
+            "AppSource": "Evergreen",
+            "AppID": "HarmonIE",
+            "AppFolderName": "HarmonIE",
+            "AppPath": [
+                {
+                "ShortcutPath": "NA",
+                "ProcessName": "NA"
+                }
+            ]          
+        },
+        {
+            "IntuneAppName": "Claude",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Anthropic",
+            "AppSource": "Evergreen",
+            "AppID": "Claude",
+            "AppFolderName": "Claude",            
+            "AppPath": [
+              {
+                  "ShortcutPath": "NA",
+                  "ProcessName": "NA"
+              }
+            ]
+        },
+        {
+            "IntuneAppName": "VC++ Redist x86",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Winget",
+            "AppID": "Microsoft.VCRedist.2015+.x86",
+            "AppFolderName": "VC++Redistx86",
+            "AppPath": [
+                {
+                    "ShortcutPath": "NA",
+                    "ProcessName": "NA"
+                }
+            ]
+        },
+        {
+            "IntuneAppName": "Windows Desktop Runtime 32bit",
+            "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+            "AppPublisher": "Microsoft",
+            "AppSource": "Evergreen",
+            "AppID": "MSWDesktopRuntimex86",
+            "AppFolderName": "WindowsDesktopRuntimex86",
+            "AppPath": [			
+				{
+                    "ShortcutPath":  "NA",
+                    "ProcessName":  "NA"
+                }     
+            ]
+        },
+        {
+          "IntuneAppName": "VC++ Redist x64",
+          "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+          "AppPublisher": "Microsoft",
+          "AppSource": "Winget",
+          "AppID": "Microsoft.VCRedist.2015+.x64",
+          "AppFolderName": "VC++Redistx64",
+          "AppPath": [
+            {
+              "ShortcutPath": "NA",
+              "ProcessName": "NA"
+            }
+          ]
+        }
+
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Unity application used by call center agents in AzP for RSA, Medical and Travel assistance LOBs",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_Accenture_Unity-AZPGR-PROD1_<version>_PKG_R1",
+            "Package Type:Win 32 PSADT",
+            "Deployment Engineer:Intune App Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Optional",
+            "Release:R1",
+            "AMC/AVCC Status:DEV",
+            "AppID:<AppID>",
+			"FamilyID:FAM4138"
+        ],
+        "Owner": "extern.nikumbh_kaustubh@allianz.de;kzervos@mondial-assistance.gr",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "Registry",
+            "DetectionMethod": "VersionComparison",
+            "KeyPath": "HKEY_LOCAL_MACHINE\\SOFTWARE\\AllianzPackages\\Accenture_Unity-AzPGRC-PROD1_PKG",
+            "ValueName": "Version",
+            "Operator": "Equal",
+            "Value": "<replaced_by_pipeline>",
+            "Check32BitOn64System": "false"
+        }        
+    ],
+    "Assignment": [
+		{
+             "Type": "Group",
+             "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+             "Groupdescription": "Test Groups for IAF AO testing",
+             "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+             "GroupMode": "Include",
+             "Intent": "Available",
+             "Notification": "showAll",
+             "FilterName": "All-AMC and AVC-Dedicated",
+             "FilterMode": "include"
+         },
+         {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-USER-APPL-WIN-UNITYAZP-GRCPROD1",
+            "Groupdescription": "QS group for Unity AzP Greece PROD1",
+            "GroupID": "5772df09-9bd7-4fe8-a0c3-4205a89aab8d",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+         {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-USER-APPL-WIN-UNITYAZP-GRCPROD1",
+            "Groupdescription": "QS group for Unity AzP Greece PROD1",
+            "GroupID": "5772df09-9bd7-4fe8-a0c3-4205a89aab8d",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+         }
+	]
+}

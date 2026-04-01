@@ -1,0 +1,99 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "Integrated tools environment for database design, modeling, development, administration, and migration.",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name: <AppID>_Oracle_MySQLWorkbench_<Version>_PKG_R1",
+            "Package Type: Win 32 PSADT",
+            "Deployment Engineer: Intune App Factory",
+            "Deployment Date: <Date>",
+            "Deployment Method: Optional",
+            "Release: R1",
+            "AMC/AVCC Status: DEV",
+            "AppID: <AppID>",
+            "FamilyID:FAM2797"
+        ],
+        "Owner": "extern.ansari_mo-adil@allianz.de",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+   "DetectionRule": [
+        {
+            "Type": "MSI",
+            "ProductCode": "<replaced_by_pipeline>",
+            "ProductVersionOperator": "greaterThanOrEqual",
+            "ProductVersion": "<replaced_by_pipeline>"
+        }
+    ],
+    "Assignment": [
+        {
+            "Type": "Group",
+            "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+            "Groupdescription": "Test Groups for IAF AO testing",
+            "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+            "GroupMode": "Include",
+            "Intent": "Available",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-MySQLWorkbench",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "39675a35-1dc8-428a-a9a3-75a2c9e360b8",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+        },
+        {
+            "Type": "IATGroup",
+            "GroupName": "WPS-QS-APPL-IAFProd-TestApps",
+            "Groupdescription": "Test Groups for IAF Apps IAT testing",
+            "GroupID": "5f857b5c-0fd2-4ef3-90d6-d4eb06ad6e9b",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "AVC - All TEST Virtual PCs",
+            "FilterMode": "include"
+        },
+        {
+            "Type": "AOTGroup",
+            "GroupName": "WPS-QS-APPL-IAFProd-TestApps",
+            "Groupdescription": "Test Groups for IAF Apps AO testing",
+            "GroupID": "5f857b5c-0fd2-4ef3-90d6-d4eb06ad6e9b",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "All-AMC and AVC-Dedicated",
+            "FilterMode": "include"
+        }
+]
+}

@@ -1,0 +1,98 @@
+{
+    "PackageInformation": {
+        "SetupType": "EXE",
+        "SetupFile": "Invoke-AppDeployToolkit.exe",
+        "SourceFolder": "Source",
+        "OutputFolder": "Package",
+        "IconFile": "Icon.png",
+        "IconURL": ""
+    },
+    "Information": {
+        "DisplayName": "<replaced_by_pipeline>",
+        "AppVersion": "<replaced_by_pipeline>",
+        "Description": "WinSCP is a popular SFTP client and FTP client for Microsoft Windows! Copy file between a local computer and remote servers using FTP, FTPS, SCP, SFTP, WebDAV or S3 file transfer protocols",
+        "Publisher": "<replaced_by_pipeline>",
+        "Notes": [
+            "Package Name:<AppID>_MartinPrinkryl_WinSCP_<Version>_PKG_R1",
+            "Package Type:Win32 PSADT",
+            "Deployment Engineer:IntuneApp Factory",
+            "Deployment Date:<Date>",
+            "Deployment Method:Optional Release: R1",
+            "AMC/AVCC Status:DEV",
+            "AppId:<AppID>",
+			"FamilyID:FAM2022"
+        ],
+        "Owner": "APPLICATIONOWNERSERVICES-WPS@allianz.com;a-aztech-wps-applicationownerservice@allianz.com",
+        "ScopeTagName":  [
+            "AMC",
+            "Service_AVC"
+        ]
+    },
+    "Program": {
+        "InstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Install",
+        "UninstallCommand": "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall",
+        "InstallExperience": "system",
+        "DeviceRestartBehavior": "suppress",
+        "AllowAvailableUninstall": "true"
+    },
+    "RequirementRule": {
+        "MinimumSupportedWindowsRelease": "W11_22H2",
+        "Architecture": "All"
+    },
+    "CustomRequirementRule": [
+    ],
+    "DetectionRule": [
+        {
+            "Type": "MSI",
+            "ProductCode": "<replaced_by_pipeline>",
+            "ProductVersionOperator": "Equal",
+            "ProductVersion": "<replaced_by_pipeline>"
+        }
+    ],
+    "Assignment": [
+   {
+        "Type": "Group",
+        "GroupName": "WPS-QS-AAD-APPL-IAFProd-TestGroup",
+        "Groupdescription": "Test Groups for IAF AO testing",
+        "GroupID": "34527ac3-c5f5-42b9-bb60-5b52215259cf",
+        "GroupMode": "Include",
+        "Intent": "Available",
+        "Notification": "showAll",
+        "FilterName": "All-AMC and AVC-Dedicated",
+        "FilterMode": "include"
+    },
+    {
+            "Type": "Group",
+            "GroupName": "WPS-LE-DEVICE-APPL-WIN-WinSCP",
+            "Groupdescription": "Test Groups for IAF LE Smoke testing",
+            "GroupID": "3803bef9-f1db-4bbb-bc39-c40932a44ea9",
+            "GroupMode": "Include",
+            "Intent": "Required",
+            "Notification": "showAll",
+            "FilterName": "",
+            "FilterMode": ""
+    },
+    {
+        "Type": "IATGroup",
+        "GroupName": "WPS-QS-AAD-APPL-WinSCP",
+        "Groupdescription": "QS group for WinSCP",
+        "GroupID": "2affa2d8-97a8-44cf-a117-8c21247d65d7",
+        "GroupMode": "Include",
+        "Intent": "Required",
+        "Notification": "showAll",
+        "FilterName": "AVC - All TEST Virtual PCs",
+        "FilterMode": "include"
+    },
+    {
+        "Type": "AOTGroup",
+        "GroupName": "WPS-QS-AAD-APPL-WinSCP",
+        "Groupdescription": "QS group for WinSCP",
+        "GroupID": "2affa2d8-97a8-44cf-a117-8c21247d65d7",
+        "GroupMode": "Include",
+        "Intent": "Required",
+        "Notification": "showAll",
+        "FilterName": "All-AMC and AVC-Dedicated",
+        "FilterMode": "include"
+    }
+]
+}

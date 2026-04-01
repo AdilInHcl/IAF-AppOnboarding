@@ -1,0 +1,18 @@
+{
+    "Apps": [                
+        {
+          "IntuneAppName": "Unity-AzPTUR-PROD1",
+          "IntuneAppNamingConvention": "PublisherAppNameAppVersion",
+          "AppPublisher": "Accenture",
+          "AppSource": "Evergreen",
+          "AppID": "Unity_AzPTUR_PROD_1",
+          "AppFolderName": "Unity_AzPTUR_PROD1",      
+          "AppPath": [
+            {
+              "ShortcutPath": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Unity_PROD_1\\Unity 26.a PROD_1.lnk",
+              "ProcessName": "Unity.exe"
+            }
+          ]
+        }   
+    ]
+}

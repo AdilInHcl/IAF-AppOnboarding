@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pdfpreflight>
+	<prefs format="Preflight Preferences" version="10.0">
+		<setting id="d7d84458d6ee7dcb3a7c34c720a6cc4a" name="default" comment="" rating="0" count="0" lock="0" active="1">
+			<feat type="int">
+				<name>I2_Feat_DetailDegree</name>
+				<value>2</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ReportErrorPerPageLev1</name>
+				<value>20</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ReportErrorPerPageLev2</name>
+				<value>200</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ReportErrorPerCatWholeDoc</name>
+				<value>10000</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ReportMaxNumberOfResources</name>
+				<value>1000</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ReportNumberPagesInOverview</name>
+				<value>1000</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_EnableViewerSettingsWarning</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowPRCDynVars</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowProfilePurpose</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowResultPurpose</name>
+				<value>1</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_PRCDefaultUpdateLevel</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskErrorRed</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskErrorGreen</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskErrorBlue</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskErrorOpacity</name>
+				<value>0.5</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightMaskErrorInvert</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightMaskErrorOutline</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskWarningRed</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskWarningGreen</name>
+				<value>0.882353</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskWarningBlue</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskWarningOpacity</name>
+				<value>0.5</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightMaskWarningInvert</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightMaskWarningOutline</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskInfoRed</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskInfoGreen</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskInfoBlue</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightMaskInfoOpacity</name>
+				<value>0.5</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightMaskInfoInvert</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightMaskInfoOutline</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapErrorRed</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapErrorGreen</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapErrorBlue</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapErrorOpacity</name>
+				<value>0.5</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_HighlightSnapErrorType</name>
+				<value>3</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapErrorThickness</name>
+				<value>2</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapWarningRed</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapWarningGreen</name>
+				<value>0.882353</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapWarningBlue</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapWarningOpacity</name>
+				<value>0.5</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_HighlightSnapWarningType</name>
+				<value>3</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapWarningThickness</name>
+				<value>2</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapInfoRed</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapInfoGreen</name>
+				<value>0</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapInfoBlue</name>
+				<value>1</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapInfoOpacity</name>
+				<value>0.5</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_HighlightSnapInfoType</name>
+				<value>3</value>
+			</feat>
+			<feat type="float">
+				<name>I2_Feat_HighlightSnapInfoThickness</name>
+				<value>2</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightBoxBorder</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_HighlightBoxFrame</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryFonts</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryColors</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventorySmoothShades</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryPatterns</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryTransparency</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryImages</name>
+				<value>1</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_InventoryImagePixel</name>
+				<value>50</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryFormXObject</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryXMPMetaObject</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_InventoryXMPMetaAdvanced</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_MaxInventoryObjectNumber</name>
+				<value>100</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_FrameButtonLabel</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ResultShowDetail</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ResultShowSnapView</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ComplianceConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ComplianceConvertPDFA</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ComplianceConvertPDFE</name>
+				<value>0</value>
+			</feat>
+			<feat type="string">
+				<name>I2_Feat_OutputIntentConvertPDFX</name>
+				<value></value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_TrappedKeyConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_OmitICCConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_UseEmbOIConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ApplyFixupsConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ApplyFixupsConvertPDFA</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ApplyFixupsConvertPDFE</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ForceConvRedistillConvertPDFA</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ForceConvPageToImageConvertPDFA</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ForceConvDocToImageConvertPDFA</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ForceConvDPIConvertPDFA</name>
+				<value>100</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_RGB2DestConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DecalibrateGCMYKConvertPDFX</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_CommentWidth</name>
+				<value>240</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_CommentHeight</name>
+				<value>180</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_PrefsDialogPage</name>
+				<value>0</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ShowMostRecently</name>
+				<value>8</value>
+			</feat>
+			<feat type="int">
+				<name>I2_Feat_ShowMostFrequently</name>
+				<value>8</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFurtherOptions</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowContainFixupAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowFixupDisabledAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowFixupOnlyAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowExportProfile</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowStartApprovalAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowLayerModifiedAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowStartInfoAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowPDFAConversionAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowLoupeDescrAlert</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_DontShowAssigned2ndTime</name>
+				<value>0</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFontGrid</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFontBoxes</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFontFilling</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFontPoints</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFontCursor</name>
+				<value>1</value>
+			</feat>
+			<feat type="bool">
+				<name>I2_Feat_ShowFontZoom</name>
+				<value>0</value>
+			</feat>
+		</setting>
+	</prefs>
+</pdfpreflight>

@@ -1,0 +1,133 @@
+{
+	"FirmwareUpdateFromFile": {
+		"key": "FirmwareUpdateFromFile",
+		"value": false,
+		"locked": false
+	},
+	"DeviceSyncPcTime": {
+		"key": "DeviceSyncPcTime",
+		"value": false,
+		"locked": false
+	},
+	"SoftphoneSetPresence": {
+		"key": "SoftphoneSetPresence",
+		"value": true,
+		"locked": false
+	},
+	"SoftphonePreferred": {
+		"key": "SoftphonePreferred",
+		"value": "1f1de11a-d984-46ed-9270-94ccefa0d896",
+		"locked": false
+	},
+	"DirectShowTray": {
+		"key": "DirectShowTray",
+		"value": true,
+		"locked": false
+	},
+	"DirectShowNotification": {
+		"key": "DirectShowNotification",
+		"value": false,
+		"locked": false
+	},
+	"EnableFeedback": {
+		"key": "EnableFeedback",
+		"value": true,
+		"locked": false
+	},
+	"NPSDAYSBETWEEN_1st": {
+		"key": "NPSDAYSBETWEEN_1st",
+		"value": 30,
+		"locked": false
+	},
+	"NPSDAYSBETWEEN_2nd": {
+		"key": "NPSDAYSBETWEEN_2nd",
+		"value": 7,
+		"locked": false
+	},
+	"SendUserNameToAnalytics": {
+		"key": "SendUserNameToAnalytics",
+		"value": false,
+		"locked": false
+	},
+	"MicrophonePositioningAlerts": {
+		"key": "MicrophonePositioningAlerts",
+		"value": false,
+		"locked": true
+	},
+	"XpressAnalyticsLevel": {
+		"key": "XpressAnalyticsLevel",
+		"value": "Basic",
+		"locked": false
+	},
+	"PeopleCountInterval": {
+		"key": "PeopleCountInterval",
+		"value": 300000,
+		"locked": false
+	},
+	"JdoAnalyticsHeartbeatFrequency": {
+		"key": "JdoAnalyticsHeartbeatFrequency",
+		"value": 14400000,
+		"locked": false
+	},
+	"FirmwareScheduleAllowAutomaticStart": {
+		"key": "FirmwareScheduleAllowAutomaticStart",
+		"locked": false,
+		"value": false
+	},
+	"FirmwareScheduleAllowPostpone": {
+		"key": "FirmwareScheduleAllowPostpone",
+		"locked": false,
+		"value": true
+	},
+	"FirmwareScheduleAllowedTime": {
+		"key": "FirmwareScheduleAllowedTime",
+		"locked": false,
+		"value": "00-23"
+	},
+	"FirmwareScheduleAllowOnlyOnPower": {
+		"key": "FirmwareScheduleAllowOnlyOnPower",
+		"locked": false,
+		"value": true
+	},
+	"ShouldOpenRoomBoundaryInstructions": {
+		"key": "ShouldOpenRoomBoundaryInstructions",
+		"locked": false,
+		"value": true
+	},
+	"ManifestCopiedDevicePids": {
+		"key": "ManifestCopiedDevicePids",
+		"locked": false,
+		"value": "[]"
+	},
+	"system-startup-data": [
+		"user",
+		"6.19.28801"
+	],
+	"StartJabraDirectAtSystemStartup": {
+		"locked": false,
+		"key": "StartJabraDirectAtSystemStartup",
+		"value": true
+	},
+	"XpressPackageName": "",
+	"AnalyticsEndpoint": {
+		"locked": true,
+		"key": "AnalyticsEndpoint",
+		"value": "https://analytics-xpress.jabra.com/api/v1/Analytics"
+	},
+	"ManifestUrl": {
+		"locked": true,
+		"key": "ManifestUrl",
+		"value": "https://sdkbackend.jabra.com/v4/DeviceConfiguration"
+	},
+	"FirmwareUrl": {
+		"locked": true,
+		"key": "FirmwareUrl",
+		"value": "https://sdkbackend.jabra.com/v3"
+	},
+	"CfuEndpoint": {
+		"locked": true,
+		"key": "CfuEndpoint",
+		"value": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/jdo.json"
+	},
+	"rootadmin-vm-p-we1-HCLAMC-STANDALONE": "HnVWsrnVPEU9ffvoItXKcYXINrUqh7cw7GjM8R/HnRA4CQvV6b/8hvngbbWwjxNfzPNxA1o+6ltdjX1X82vLA+whnToFX+rWtBill46Y2qf0SqIK/ux0mx+B9IdMo3Iz"
+}

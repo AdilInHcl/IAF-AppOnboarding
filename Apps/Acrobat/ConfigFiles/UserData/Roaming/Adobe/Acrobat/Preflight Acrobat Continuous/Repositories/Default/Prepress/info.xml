@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<repository_info>
+	<flags locked="0" update="1" resources="1" color="0" backR="255" backG="255" backB="255" textR="0" textG="0" textB="0" dict="1" updateLevel="0" id="c05cea1200cfbd28ccb42c21c1295eb4"></flags>
+	<created>D:20250320075445Z</created>
+	<modified>D:20250320075445Z</modified>
+	<name>Prepress, Color and Transparency</name>
+	<description>Profiles, Checks and Fixups for numerous prepress oriented tasks</description>
+	<dictkey>DLG_REP_DefaultPrepress_short</dictkey>
+	<defaultpack>Prepress.kfp</defaultpack>
+</repository_info>

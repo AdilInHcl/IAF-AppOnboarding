@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<repository_info>
+	<flags locked="0" update="1" resources="1" color="0" backR="255" backG="255" backB="255" textR="0" textG="0" textB="0" dict="1" updateLevel="0" id="d30e42607eca6cab243e2ddbc00871c2"></flags>
+	<created>D:20250320075445Z</created>
+	<modified>D:20250320075445Z</modified>
+	<name>PDF Standards</name>
+	<description>Profiles and Fixups for PDF-based ISO standards</description>
+	<dictkey>DLG_REP_DefaultStandards_short</dictkey>
+	<defaultpack>Standards.kfp</defaultpack>
+</repository_info>
